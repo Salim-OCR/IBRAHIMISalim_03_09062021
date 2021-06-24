@@ -1,0 +1,19 @@
+{
+  "name": "p3_01_lienspagesweb",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salim-OCR/IBRAHIMISalim_03_09062021.git"
+  },
+  "author": "salim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salim-OCR/IBRAHIMISalim_03_09062021/issues"
+  },
+  "homepage": "https://github.com/Salim-OCR/IBRAHIMISalim_03_09062021#readme"
+}
