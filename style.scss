@@ -1,0 +1,53 @@
+$primary: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+#conteneur{
+    margin: auto;
+    max-width: 599px;
+}
+header{
+    border: 1px solid red;
+    text-align: center;
+    background-color: rgba(214, 214, 214, 0.25);
+    img{
+        border: 1px solid green;
+        width: 160px;
+        margin-bottom: 15px;  
+    }
+    .localisation{
+        border-top: 3px solid rgba(177, 177, 177, 0.3);
+        background-color: rgba(214, 214, 214, 0.582);
+        height: 50px;
+        & p{
+            border: 1px solid white;
+            margin:auto;
+            margin-top: 10px;
+        }
+        & i{
+            margin-right: 15px;
+            border: 1px solid white;
+        }
+        & span{
+            border: 1px solid white;
+            margin-right: 20px;
+        }
+    } 
+    .header h1{
+        border:1px solid blueviolet;
+        width: 300px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .p{
+        border: 1px solid rgb(143, 30, 30);
+        margin: auto;       
+    }
+    input{
+        background-color: $secondaire;
+        height: 40px;
+        width: 185px;
+        color: white;
+        border-radius: 25px;
+        border: $primary;
+    }
+}
