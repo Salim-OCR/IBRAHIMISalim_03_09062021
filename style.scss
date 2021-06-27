@@ -19,16 +19,16 @@ header{
         border-top: 3px solid rgba(177, 177, 177, 0.3);
         background-color: rgba(214, 214, 214, 0.582);
         height: 50px;
-        & p{
+        p{
             border: 1px solid white;
             margin:auto;
             margin-top: 10px;
         }
-        & i{
+        i{
             margin-right: 15px;
             border: 1px solid white;
         }
-        & span{
+        span{
             border: 1px solid white;
             margin-right: 20px;
         }
@@ -53,12 +53,12 @@ header{
     }
     .filtres{
         background-color: white;
-        & h1{
+        h1{
             border: 1px solid;
             text-align: left;
             margin-left: 15px;
         }
-        & span{
+        span{
             background-color: $primary;
             color:white;
             border-radius: 50px;
@@ -67,7 +67,7 @@ header{
             position: relative;
             right: 5px;
         }
-        & .case_g{
+        .case_g{
             height: 55px;
             padding-top: 5px;
             background-color: $fond_gris;
@@ -76,30 +76,30 @@ header{
             margin: auto;
             margin-bottom: 15px;
             box-shadow: 3px 3px 5px rgb(195, 195, 195);
-            & p{
+            p{
                 text-align: left;
                 font-weight: bold;
             }
-            & i{
+            i{
                 color: rgba(10, 10, 10, 0.589);
                 margin-left: 25px;
                 margin-right: 25px ;  
             }           
         }
-        & .case_v{
+        .case_v{
             height: 55px;
             padding-top: 5px;
-            background-color: #f0e8fa;
+            background-color: lighten($primary, 35);
             border-radius: 15px;
             width: 400px;
             margin: auto;
             margin-bottom: 15px;
             box-shadow: 3px 3px 5px rgb(195, 195, 195);
-            & p{
+            p{
                 text-align: left;
                 font-weight: bold;
             }
-            & i{
+            i{
                 color: $primary;
                 margin-left: 25px;
                 margin-right: 25px ;  
@@ -111,23 +111,27 @@ section{
     background-color: $fond_gris;
     width: 430px;
     margin: auto;
-    & h1{
+    h1{
         margin-top: 50px;
         padding-top: 50px;
         margin-left: 15px;
     }
-    figure{    
-        & a{
+    .figure1{
+        border: 1px solid red;
+        width: 80%;
+        margin: auto;
+    }
+    article{    
+        a{
             text-decoration: none;
         }
-        & img{
+        img{
             width: 100%;
-            border-radius: 15px 15px 0 0;
-            
+            border-radius: 15px 15px 0 0;          
         }
-        & .txt{
+        .txt{
             background-color: $tertiaire;
-            color: rgb(64, 136, 64);
+            color: darken($tertiaire, 30);
             font-size: 0.8em;
             font-weight: bold;
             height: 20px;
@@ -138,15 +142,21 @@ section{
             top: 40px;
             right: 15px;
         }
-        & figcaption{
-            background-color: white;
-            & div{
+        div{
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            h2{
                 display: flex;
                 justify-content: space-between;
+                width: 90%;
+                margin: auto;
+                margin-top: 10px;
+            }
+            p{
+                width: 90%;
+                margin: auto;
             }
         }
-    }
-    .figure1{
-        border: 1px solid red;
     }
 }
