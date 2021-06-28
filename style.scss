@@ -7,54 +7,58 @@ $fond_gris:rgba(214, 214, 214, 0.25);
     max-width: 599px;
 }
 header{
-    border: 1px solid red;
+    width: 430px;
+    margin: auto;
     text-align: center;
-    background-color: rgba(214, 214, 214, 0.25);
-    img{
-        border: 1px solid green;
-        width: 160px;
-        margin-bottom: 15px;  
+    background-color: $fond_gris;
+    margin-bottom: 100px;
+    .logo_header{
+        background-color: white;
+        img{
+            width: 160px;
+            margin-bottom: 15px;  
+        }
     }
     .localisation{
-        border-top: 3px solid rgba(177, 177, 177, 0.3);
-        background-color: rgba(214, 214, 214, 0.582);
-        height: 50px;
+        border-top: 3px solid darken($fond_gris, 10);
+        background-color: darken($fond_gris, 10);
+        height: 40px;
+        font-weight: bold;
         p{
-            border: 1px solid white;
+            color: lighten(black, 35);
             margin:auto;
             margin-top: 10px;
         }
         i{
             margin-right: 15px;
-            border: 1px solid white;
         }
         span{
-            border: 1px solid white;
             margin-right: 20px;
         }
     } 
-    .header h1{
-        border:1px solid blueviolet;
+    h1{
         width: 300px;
         margin: auto;
         margin-top: 30px;
     }
     .p{
-        border: 1px solid rgb(143, 30, 30);
+        color: lighten(black, 35);
         margin: auto;       
     }
-    input{
-        background-color: $secondaire;
+    .btn {
+        background-color: lighten($primary, 5);
         height: 40px;
         width: 185px;
         color: white;
         border-radius: 25px;
         border: $primary;
+        margin-bottom: 30px;
     }
     .filtres{
+        
         background-color: white;
-        h1{
-            border: 1px solid;
+        h2{
+            padding-top: 50px;
             text-align: left;
             margin-left: 15px;
         }
@@ -114,14 +118,15 @@ section{
     h1{
         margin-top: 50px;
         padding-top: 50px;
-        margin-left: 15px;
+        margin-left: 25px;
     }
-    .figure1{
-        border: 1px solid red;
-        width: 80%;
+    .figures_acceuil{
+
+        border-radius: 15px ;
+        background-color: #fff;
+        width: 90%;
         margin: auto;
-    }
-    article{    
+        margin-bottom: 20px;
         a{
             text-decoration: none;
         }
@@ -131,21 +136,24 @@ section{
         }
         .txt{
             background-color: $tertiaire;
-            color: darken($tertiaire, 30);
-            font-size: 0.8em;
+            color: darken($tertiaire, 35);
+            font-size: 0.83em;
             font-weight: bold;
-            height: 20px;
-            width: 60px;
+            border-radius: 3px;
+            width: 70px;
+            padding: 5px;
             text-align: center;
             position:relative;
-            margin-left: auto; 
-            top: 40px;
-            right: 15px;
+            bottom: 215px; 
+            left: 130px;
+
         }
         div{
             background-color: #fff;
             display: flex;
             flex-direction: column;
+            border-radius: 0 0 15px 15px;
+            margin-top: 0px;
             h2{
                 display: flex;
                 justify-content: space-between;
@@ -160,3 +168,31 @@ section{
         }
     }
 }
+footer{
+    background-color: lighten(black, 20);
+    color: white;
+    width: 430px;
+    margin: auto;
+    height: 170px;
+    & .logo_white{
+        margin-top: 20px;
+        width: 80px;
+        margin-left: 35px;
+        filter: invert(1);
+    }
+    ul{
+        list-style-type: none;
+        li{
+            margin-bottom: 5px;
+            i {
+                margin-right: 10px;
+                font-size: 10px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+

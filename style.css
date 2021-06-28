@@ -4,66 +4,70 @@
 }
 
 header {
-  border: 1px solid red;
+  width: 430px;
+  margin: auto;
   text-align: center;
   background-color: rgba(214, 214, 214, 0.25);
+  margin-bottom: 100px;
 }
 
-header img {
-  border: 1px solid green;
+header .logo_header {
+  background-color: white;
+}
+
+header .logo_header img {
   width: 160px;
   margin-bottom: 15px;
 }
 
 header .localisation {
-  border-top: 3px solid rgba(177, 177, 177, 0.3);
-  background-color: rgba(214, 214, 214, 0.582);
-  height: 50px;
+  border-top: 3px solid rgba(189, 189, 189, 0.25);
+  background-color: rgba(189, 189, 189, 0.25);
+  height: 40px;
+  font-weight: bold;
 }
 
 header .localisation p {
-  border: 1px solid white;
+  color: #595959;
   margin: auto;
   margin-top: 10px;
 }
 
 header .localisation i {
   margin-right: 15px;
-  border: 1px solid white;
 }
 
 header .localisation span {
-  border: 1px solid white;
   margin-right: 20px;
 }
 
-header .header h1 {
-  border: 1px solid blueviolet;
+header h1 {
   width: 300px;
   margin: auto;
   margin-top: 30px;
 }
 
 header .p {
-  border: 1px solid #8f1e1e;
+  color: #595959;
   margin: auto;
 }
 
-header input {
-  background-color: #FF79DA;
+header .btn {
+  background-color: #a16be0;
   height: 40px;
   width: 185px;
   color: white;
   border-radius: 25px;
   border: #9356DC;
+  margin-bottom: 30px;
 }
 
 header .filtres {
   background-color: white;
 }
 
-header .filtres h1 {
-  border: 1px solid;
+header .filtres h2 {
+  padding-top: 50px;
   text-align: left;
   margin-left: 15px;
 }
@@ -133,39 +137,41 @@ section {
 section h1 {
   margin-top: 50px;
   padding-top: 50px;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
-section .figure1 {
-  border: 1px solid red;
-  width: 80%;
+section .figures_acceuil {
+  border-radius: 15px;
+  background-color: #fff;
+  width: 90%;
   margin: auto;
+  margin-bottom: 20px;
 }
 
-section article a {
+section .figures_acceuil a {
   text-decoration: none;
 }
 
-section article img {
+section .figures_acceuil img {
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
 
-section article .txt {
+section .figures_acceuil .txt {
   background-color: #99E2D0;
-  color: #32b091;
-  font-size: 0.8em;
+  color: #2c9c81;
+  font-size: 0.83em;
   font-weight: bold;
-  height: 20px;
-  width: 60px;
+  border-radius: 3px;
+  width: 70px;
+  padding: 5px;
   text-align: center;
   position: relative;
-  margin-left: auto;
-  top: 40px;
-  right: 15px;
+  bottom: 215px;
+  left: 130px;
 }
 
-section article div {
+section .figures_acceuil div {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,9 +180,11 @@ section article div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 0 0 15px 15px;
+  margin-top: 0px;
 }
 
-section article div h2 {
+section .figures_acceuil div h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,8 +196,42 @@ section article div h2 {
   margin-top: 10px;
 }
 
-section article div p {
+section .figures_acceuil div p {
   width: 90%;
   margin: auto;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  width: 430px;
+  margin: auto;
+  height: 170px;
+}
+
+footer .logo_white {
+  margin-top: 20px;
+  width: 80px;
+  margin-left: 35px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li i {
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
