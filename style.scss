@@ -46,13 +46,18 @@ header{
         margin: auto;       
     }
     .btn {
+        display:block;
         background-color: lighten($primary, 5);
-        height: 40px;
+        height: 30px;
         width: 185px;
         color: white;
         border-radius: 25px;
         border: $primary;
+        margin:auto;
         margin-bottom: 30px;
+        padding-top: 10px;
+        cursor: pointer;
+        text-decoration: none;
     }
     .filtres{
         
@@ -165,6 +170,9 @@ section{
                 width: 90%;
                 margin: auto;
             }
+            // p:nth-child(2) {
+            //     padding-bottom: 10px;
+            // }
         }
     }
 }
