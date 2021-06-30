@@ -1,83 +1,75 @@
 #conteneur {
   margin: auto;
   max-width: 599px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-header {
+.header_acceuil {
   width: 430px;
   margin: auto;
   text-align: center;
   background-color: rgba(214, 214, 214, 0.25);
-  margin-bottom: 100px;
+  height: 350px;
 }
 
-header .logo_header {
+.header_acceuil .logo_header {
   background-color: white;
 }
 
-header .logo_header img {
+.header_acceuil .logo_header img {
   width: 160px;
   margin-bottom: 15px;
 }
 
-header .localisation {
+.header_acceuil .localisation {
   border-top: 3px solid rgba(189, 189, 189, 0.25);
   background-color: rgba(189, 189, 189, 0.25);
   height: 40px;
   font-weight: bold;
 }
 
-header .localisation p {
+.header_acceuil .localisation p {
   color: #595959;
   margin: auto;
   margin-top: 10px;
 }
 
-header .localisation i {
+.header_acceuil .localisation i {
   margin-right: 15px;
 }
 
-header .localisation span {
+.header_acceuil .localisation span {
   margin-right: 20px;
 }
 
-header h1 {
+.header_acceuil h1 {
   width: 300px;
   margin: auto;
   margin-top: 30px;
 }
 
-header .p {
+.header_acceuil .p {
   color: #595959;
   margin: auto;
 }
 
-header .btn {
-  display: block;
-  background-color: #a16be0;
-  height: 30px;
-  width: 185px;
-  color: white;
-  border-radius: 25px;
-  border: #9356DC;
-  margin: auto;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-header .filtres {
+.filtres {
   background-color: white;
 }
 
-header .filtres h2 {
+.filtres h2 {
   padding-top: 50px;
   text-align: left;
   margin-left: 15px;
 }
 
-header .filtres span {
+.filtres span {
   background-color: #9356DC;
   color: white;
   border-radius: 50px;
@@ -87,7 +79,7 @@ header .filtres span {
   right: 5px;
 }
 
-header .filtres .case_g {
+.filtres .case_g {
   height: 55px;
   padding-top: 5px;
   background-color: rgba(214, 214, 214, 0.25);
@@ -99,18 +91,18 @@ header .filtres .case_g {
           box-shadow: 3px 3px 5px #c3c3c3;
 }
 
-header .filtres .case_g p {
+.filtres .case_g p {
   text-align: left;
   font-weight: bold;
 }
 
-header .filtres .case_g i {
+.filtres .case_g i {
   color: rgba(10, 10, 10, 0.589);
   margin-left: 25px;
   margin-right: 25px;
 }
 
-header .filtres .case_v {
+.filtres .case_v, .filtres .case_g:hover {
   height: 55px;
   padding-top: 5px;
   background-color: #f2eafb;
@@ -122,12 +114,12 @@ header .filtres .case_v {
           box-shadow: 3px 3px 5px #c3c3c3;
 }
 
-header .filtres .case_v p {
+.filtres .case_v p, .filtres .case_g:hover p {
   text-align: left;
   font-weight: bold;
 }
 
-header .filtres .case_v i {
+.filtres .case_v i, .filtres .case_g:hover i {
   color: #9356DC;
   margin-left: 25px;
   margin-right: 25px;
@@ -218,8 +210,6 @@ footer .logo_white {
   margin-top: 20px;
   width: 80px;
   margin-left: 35px;
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 
 footer ul {
@@ -238,5 +228,91 @@ footer ul li i {
 footer ul a {
   text-decoration: none;
   color: white;
+}
+
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 20px;
+}
+
+.header_menu img {
+  width: 200px;
+  margin: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.section_menu {
+  position: relative;
+  bottom: 70px;
+  width: 100%;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.section_menu header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_menu h2 {
+  border-bottom: 3px solid #99E2D0;
+  width: 50px;
+}
+
+.section_menu article {
+  width: 90%;
+  margin-left: 20px;
+}
+
+.section_menu article .a {
+  background-color: #fff;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section_menu article .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section_menu article .gras {
+  font-weight: 900;
+}
+
+.btn_acceuil, .btn {
+  display: block;
+  text-decoration: none;
+  background-color: #a16be0;
+  height: 30px;
+  width: 185px;
+  color: white;
+  border-radius: 25px;
+  border: #9356DC;
+  margin: auto;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.btn_acceuil:hover, .btn:hover {
+  background-color: #99E2D0;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=style.css.map */
