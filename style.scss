@@ -2,6 +2,11 @@ $primary: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $fond_gris:rgba(214, 214, 214, 0.25);
+$coeur: linear-gradient(170deg, $secondaire  2%, $primary 100%);
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
 #conteneur{
     margin: auto;
     max-width: 599px;
@@ -9,8 +14,6 @@ $fond_gris:rgba(214, 214, 214, 0.25);
     flex-direction: column;
 }
 .header_acceuil{
-    width: 430px;
-    margin: auto;
     text-align: center;
     background-color: $fond_gris;
     height: 350px;
@@ -43,17 +46,18 @@ $fond_gris:rgba(214, 214, 214, 0.25);
         margin: auto;
         margin-top: 30px;
     }
-    .p{
-        color: lighten(black, 35);
+    .lighten{
+        color: lighten(black, 30);
         margin: auto;       
     }
 }
 .filtres{
+    border: 1px solid;
     background-color: white;
     h2{
         padding-top: 50px;
         text-align: left;
-        margin-left: 15px;
+        margin-left: 5%;
     }
     span{
         background-color: $primary;
@@ -106,17 +110,27 @@ $fond_gris:rgba(214, 214, 214, 0.25);
         }
     }
 }
-section{
+
+
+
+
+
+
+
+
+
+
+
+.menu{
     background-color: $fond_gris;
     width: 430px;
     margin: auto;
-    h1{
+    h2{
         margin-top: 50px;
         padding-top: 50px;
         margin-left: 25px;
     }
-    .figures_acceuil{
-
+    .menu_acceuil{
         border-radius: 15px ;
         background-color: #fff;
         width: 90%;
@@ -129,7 +143,7 @@ section{
             width: 100%;
             border-radius: 15px 15px 0 0;          
         }
-        .txt{
+        .position_txt{
             background-color: $tertiaire;
             color: darken($tertiaire, 35);
             font-size: 0.83em;
@@ -139,9 +153,13 @@ section{
             padding: 5px;
             text-align: center;
             position:relative;
-            bottom: 215px; 
+            bottom: 210px; 
             left: 130px;
 
+        }
+        .position_txt2{
+            @extend .position_txt;
+            bottom: 220px;    
         }
         div{
             background-color: #fff;
@@ -149,12 +167,15 @@ section{
             flex-direction: column;
             border-radius: 0 0 15px 15px;
             margin-top: 0px;
-            h2{
+            h3{
                 display: flex;
                 justify-content: space-between;
                 width: 90%;
                 margin: auto;
                 margin-top: 10px;
+                .btn_coeur{
+                    -webkit-text-fill-color: yellow;
+                }
             }
             p{
                 width: 90%;
@@ -166,6 +187,15 @@ section{
         }
     }
 }
+
+
+
+
+
+
+
+
+
 footer{
     background-color: lighten(black, 20);
     color: white;
@@ -176,6 +206,7 @@ footer{
         margin-top: 20px;
         width: 80px;
         margin-left: 35px;
+        font-family: 'Shrikhand', cursive;
     }
     ul{
         list-style-type: none;
@@ -192,6 +223,12 @@ footer{
         }
     }
 }
+
+
+
+
+
+
 .header_menu{
     display: flex;
     justify-content: space-around;
@@ -236,10 +273,21 @@ footer{
         }
     }  
 }
+
+
+
+
+
+
+
+
+
+
+
 .btn_acceuil{
     display:block;
     text-decoration: none;
-    background-color: lighten($primary, 5);
+    background: linear-gradient(170deg, $secondaire  2%, $primary 100%);
     height: 30px;
     width: 185px;
     color: white;
@@ -249,9 +297,18 @@ footer{
     padding-top: 10px;
     cursor: pointer;
     &:hover{
-        background-color: #99E2D0;
+        border: 2px solide ;
+        background: linear-gradient(170deg, $tertiaire 2%, $secondaire  100%);
     }
 }
+
+// .btn_bkg{
+//     @extend .btn_acceuil;
+//     position: relative;
+//     bottom: 40px;
+//     background: rgba($secondaire, 0.58);
+
+// }
 .btn{
     @extend .btn_acceuil;
     text-align: center;

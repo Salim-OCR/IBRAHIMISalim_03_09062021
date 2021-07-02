@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 #conteneur {
   margin: auto;
   max-width: 599px;
@@ -11,8 +15,6 @@
 }
 
 .header_acceuil {
-  width: 430px;
-  margin: auto;
   text-align: center;
   background-color: rgba(214, 214, 214, 0.25);
   height: 350px;
@@ -54,19 +56,20 @@
   margin-top: 30px;
 }
 
-.header_acceuil .p {
-  color: #595959;
+.header_acceuil .lighten {
+  color: #4d4d4d;
   margin: auto;
 }
 
 .filtres {
+  border: 1px solid;
   background-color: white;
 }
 
 .filtres h2 {
   padding-top: 50px;
   text-align: left;
-  margin-left: 15px;
+  margin-left: 5%;
 }
 
 .filtres span {
@@ -125,19 +128,19 @@
   margin-right: 25px;
 }
 
-section {
+.menu {
   background-color: rgba(214, 214, 214, 0.25);
   width: 430px;
   margin: auto;
 }
 
-section h1 {
+.menu h2 {
   margin-top: 50px;
   padding-top: 50px;
   margin-left: 25px;
 }
 
-section .figures_acceuil {
+.menu .menu_acceuil {
   border-radius: 15px;
   background-color: #fff;
   width: 90%;
@@ -145,16 +148,16 @@ section .figures_acceuil {
   margin-bottom: 20px;
 }
 
-section .figures_acceuil a {
+.menu .menu_acceuil a {
   text-decoration: none;
 }
 
-section .figures_acceuil img {
+.menu .menu_acceuil img {
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
 
-section .figures_acceuil .txt {
+.menu .menu_acceuil .position_txt, .menu .menu_acceuil .position_txt2 {
   background-color: #99E2D0;
   color: #2c9c81;
   font-size: 0.83em;
@@ -164,11 +167,15 @@ section .figures_acceuil .txt {
   padding: 5px;
   text-align: center;
   position: relative;
-  bottom: 215px;
+  bottom: 210px;
   left: 130px;
 }
 
-section .figures_acceuil div {
+.menu .menu_acceuil .position_txt2 {
+  bottom: 220px;
+}
+
+.menu .menu_acceuil div {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,7 +188,7 @@ section .figures_acceuil div {
   margin-top: 0px;
 }
 
-section .figures_acceuil div h2 {
+.menu .menu_acceuil div h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,7 +200,11 @@ section .figures_acceuil div h2 {
   margin-top: 10px;
 }
 
-section .figures_acceuil div p {
+.menu .menu_acceuil div h3 .btn_coeur {
+  -webkit-text-fill-color: yellow;
+}
+
+.menu .menu_acceuil div p {
   width: 90%;
   margin: auto;
 }
@@ -210,6 +221,7 @@ footer .logo_white {
   margin-top: 20px;
   width: 80px;
   margin-left: 35px;
+  font-family: 'Shrikhand', cursive;
 }
 
 footer ul {
@@ -296,7 +308,7 @@ footer ul a {
 .btn_acceuil, .btn {
   display: block;
   text-decoration: none;
-  background-color: #a16be0;
+  background: linear-gradient(170deg, #FF79DA 2%, #9356DC 100%);
   height: 30px;
   width: 185px;
   color: white;
@@ -308,7 +320,8 @@ footer ul a {
 }
 
 .btn_acceuil:hover, .btn:hover {
-  background-color: #99E2D0;
+  border: 2px solide;
+  background: linear-gradient(170deg, #99E2D0 2%, #FF79DA 100%);
 }
 
 .btn {
