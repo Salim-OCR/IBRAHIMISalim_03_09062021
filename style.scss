@@ -2,7 +2,7 @@ $primary: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $fond_gris:rgba(214, 214, 214, 0.25);
-$coeur: linear-gradient(170deg, $secondaire  2%, $primary 100%);
+$coeur: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -85,7 +85,6 @@ body{
             font-weight: bold;
         }
         i{
-            color: rgba(10, 10, 10, 0.589);
             margin-left: 25px;
             margin-right: 25px ;  
         }           
@@ -136,9 +135,6 @@ body{
         width: 90%;
         margin: auto;
         margin-bottom: 20px;
-        a{
-            text-decoration: none;
-        }
         img{
             width: 100%;
             border-radius: 15px 15px 0 0;          
@@ -174,16 +170,19 @@ body{
                 margin: auto;
                 margin-top: 10px;
                 .btn_coeur{
-                    -webkit-text-fill-color: yellow;
+                    color:transparent;
+                    background: $coeur;
+                    -webkit-background-clip: text;
+                            background-clip: text;
+                }
+                .btn_coeur_white{
+                    color: rgb(45, 54, 45);
                 }
             }
             p{
                 width: 90%;
                 margin: auto;
             }
-            // p:nth-child(2) {
-            //     padding-bottom: 10px;
-            // }
         }
     }
 }
@@ -296,9 +295,9 @@ footer{
     margin:auto;
     padding-top: 10px;
     cursor: pointer;
-    &:hover{
-        border: 2px solide ;
+    &:hover{ 
         background: linear-gradient(170deg, $tertiaire 2%, $secondaire  100%);
+        box-shadow: 0px 10px 13px -7px $tertiaire, 0px 0px 3px 0px $primary;
     }
 }
 

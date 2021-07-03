@@ -100,7 +100,6 @@ body {
 }
 
 .filtres .case_g i {
-  color: rgba(10, 10, 10, 0.589);
   margin-left: 25px;
   margin-right: 25px;
 }
@@ -146,10 +145,6 @@ body {
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
-}
-
-.menu .menu_acceuil a {
-  text-decoration: none;
 }
 
 .menu .menu_acceuil img {
@@ -201,7 +196,14 @@ body {
 }
 
 .menu .menu_acceuil div h3 .btn_coeur {
-  -webkit-text-fill-color: yellow;
+  color: transparent;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.menu .menu_acceuil div h3 .btn_coeur_white {
+  color: #2d362d;
 }
 
 .menu .menu_acceuil div p {
@@ -320,8 +322,9 @@ footer ul a {
 }
 
 .btn_acceuil:hover, .btn:hover {
-  border: 2px solide;
   background: linear-gradient(170deg, #99E2D0 2%, #FF79DA 100%);
+  -webkit-box-shadow: 0px 10px 13px -7px #99E2D0, 0px 0px 3px 0px #9356DC;
+          box-shadow: 0px 10px 13px -7px #99E2D0, 0px 0px 3px 0px #9356DC;
 }
 
 .btn {
