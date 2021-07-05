@@ -6,6 +6,10 @@ $coeur: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
 
 body{
     font-family: 'Roboto', sans-serif;
+    a{
+        list-style-type: none;
+        text-decoration: none;
+    }
 }
 #conteneur{
     margin: auto;
@@ -135,6 +139,7 @@ body{
         width: 90%;
         margin: auto;
         margin-bottom: 20px;
+        position: relative;
         img{
             width: 100%;
             border-radius: 15px 15px 0 0;          
@@ -172,11 +177,21 @@ body{
                 .btn_coeur{
                     color:transparent;
                     background: $coeur;
-                    -webkit-background-clip: text;
+                   -webkit-background-clip: text;
                             background-clip: text;
-                }
+                    position: absolute;
+                    right: 19.5px;
+                    z-index: 0;
+                 }
                 .btn_coeur_white{
-                    color: rgb(45, 54, 45);
+                    z-index: 1;
+                    background: white;
+                    &:hover{
+                        @extend .btn_coeur;
+                    }
+                    &:active{
+                        @extend .btn_coeur;
+                    }
                 }
             }
             p{
@@ -243,12 +258,13 @@ footer{
         margin: auto;
 }
 .section_menu{
-    position: relative;
-    bottom:70px;
     width: 100%;
     border-radius: 50px 50px 0px 0px;
-    header{
+    background: $fond_gris;
+    h1{
+        padding-top: 100px ;
         display: flex;
+        justify-content: space-around;
     }
     h2{
         border-bottom: 3px solid $tertiaire;

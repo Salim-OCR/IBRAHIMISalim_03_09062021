@@ -2,6 +2,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+body a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
 #conteneur {
   margin: auto;
   max-width: 599px;
@@ -145,6 +150,7 @@ body {
   width: 90%;
   margin: auto;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .menu .menu_acceuil img {
@@ -195,15 +201,19 @@ body {
   margin-top: 10px;
 }
 
-.menu .menu_acceuil div h3 .btn_coeur {
+.menu .menu_acceuil div h3 .btn_coeur, .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .btn_coeur_white:active {
   color: transparent;
   background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  position: absolute;
+  right: 19.5px;
+  z-index: 0;
 }
 
 .menu .menu_acceuil div h3 .btn_coeur_white {
-  color: #2d362d;
+  z-index: 1;
+  background: white;
 }
 
 .menu .menu_acceuil div p {
@@ -265,16 +275,18 @@ footer ul a {
 }
 
 .section_menu {
-  position: relative;
-  bottom: 70px;
   width: 100%;
   border-radius: 50px 50px 0px 0px;
+  background: rgba(214, 214, 214, 0.25);
 }
 
-.section_menu header {
+.section_menu h1 {
+  padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .section_menu h2 {
