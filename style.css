@@ -201,7 +201,7 @@ body a {
   margin-top: 10px;
 }
 
-.menu .menu_acceuil div h3 .btn_coeur, .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .btn_coeur_white:active {
+.menu .menu_acceuil div h3 .btn_coeur, .menu .menu_acceuil div h3 .btn_coeur_white:hover {
   color: transparent;
   background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
