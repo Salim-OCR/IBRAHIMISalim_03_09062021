@@ -153,14 +153,15 @@ body{
             width: 70px;
             padding: 5px;
             text-align: center;
-            position:relative;
-            bottom: 210px; 
-            left: 130px;
+            position:absolute;
+            top: 7%;
+            right: 7%;
 
         }
         .position_txt2{
-            @extend .position_txt;
-            bottom: 220px;    
+            @extend .position_txt; 
+            top: 6%;   
+            right: 5%;
         }
         div{
             background-color: #fff;
@@ -214,7 +215,7 @@ footer{
     margin: auto;
     height: 170px;
     .logo_white{
-        margin-top: 20px;
+        padding-top: 20px;
         width: 80px;
         margin-left: 35px;
         font-family: 'Shrikhand', cursive;
@@ -223,9 +224,21 @@ footer{
         list-style-type: none;
         li{
             margin-bottom: 5px;
-            i {
-                margin-right: 10px;
+            .fourchette {
+                float: left;
+                font-size: 12px;
+                padding-top: 5px;
+            }
+            .poignet_de_mains{
+                @extend .fourchette;
                 font-size: 10px;
+            }
+            .p{
+                margin-left: 10px;
+            }
+            .pp{
+                @extend .p;
+                margin-left: 9px;
             }
         }
         a{

@@ -167,13 +167,14 @@ body a {
   width: 70px;
   padding: 5px;
   text-align: center;
-  position: relative;
-  bottom: 210px;
-  left: 130px;
+  position: absolute;
+  top: 7%;
+  right: 7%;
 }
 
 .menu .menu_acceuil .position_txt2 {
-  bottom: 220px;
+  top: 6%;
+  right: 5%;
 }
 
 .menu .menu_acceuil div {
@@ -230,7 +231,7 @@ footer {
 }
 
 footer .logo_white {
-  margin-top: 20px;
+  padding-top: 20px;
   width: 80px;
   margin-left: 35px;
   font-family: 'Shrikhand', cursive;
@@ -244,9 +245,22 @@ footer ul li {
   margin-bottom: 5px;
 }
 
-footer ul li i {
-  margin-right: 10px;
+footer ul li .fourchette, footer ul li .poignet_de_mains {
+  float: left;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+footer ul li .poignet_de_mains {
   font-size: 10px;
+}
+
+footer ul li .p, footer ul li .pp {
+  margin-left: 10px;
+}
+
+footer ul li .pp {
+  margin-left: 9px;
 }
 
 footer ul a {
