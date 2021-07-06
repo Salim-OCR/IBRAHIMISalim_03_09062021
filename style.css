@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body a {
@@ -10,13 +10,6 @@ body a {
 #conteneur {
   margin: auto;
   max-width: 599px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .header_acceuil {
@@ -38,13 +31,13 @@ body a {
   border-top: 3px solid rgba(189, 189, 189, 0.25);
   background-color: rgba(189, 189, 189, 0.25);
   height: 40px;
-  font-weight: bold;
 }
 
 .header_acceuil .localisation p {
-  color: #595959;
   margin: auto;
   margin-top: 10px;
+  font-weight: 900;
+  text-transform: capitalize;
 }
 
 .header_acceuil .localisation i {
@@ -64,6 +57,7 @@ body a {
 .header_acceuil .lighten {
   color: #4d4d4d;
   margin: auto;
+  font-weight: bold;
 }
 
 .filtres {
@@ -77,16 +71,6 @@ body a {
   margin-left: 5%;
 }
 
-.filtres span {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50px;
-  padding-left: 5px;
-  font-weight: 400;
-  position: relative;
-  right: 5px;
-}
-
 .filtres .case_g {
   height: 55px;
   padding-top: 5px;
@@ -97,6 +81,23 @@ body a {
   margin-bottom: 15px;
   -webkit-box-shadow: 3px 3px 5px #c3c3c3;
           box-shadow: 3px 3px 5px #c3c3c3;
+  position: relative;
+}
+
+.filtres .case_g::before {
+  content: attr(data-count);
+  position: absolute;
+  background: #9356DC;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  top: 20px;
+  left: -10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .filtres .case_g p {
@@ -107,6 +108,7 @@ body a {
 .filtres .case_g i {
   margin-left: 25px;
   margin-right: 25px;
+  color: #666666;
 }
 
 .filtres .case_v, .filtres .case_g:hover {
@@ -119,6 +121,23 @@ body a {
   margin-bottom: 15px;
   -webkit-box-shadow: 3px 3px 5px #c3c3c3;
           box-shadow: 3px 3px 5px #c3c3c3;
+  position: relative;
+}
+
+.filtres .case_v::before, .filtres .case_g:hover::before {
+  content: attr(data-count);
+  position: absolute;
+  background: #9356DC;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  top: 20px;
+  left: -10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .filtres .case_v p, .filtres .case_g:hover p {
@@ -135,6 +154,7 @@ body a {
 .menu {
   background-color: rgba(214, 214, 214, 0.25);
   width: 430px;
+  height: 1250px;
   margin: auto;
 }
 
@@ -225,7 +245,7 @@ body a {
 footer {
   background-color: #333333;
   color: white;
-  width: 430px;
+  width: 100%;
   margin: auto;
   height: 170px;
 }
@@ -291,16 +311,35 @@ footer ul a {
 .section_menu {
   width: 100%;
   border-radius: 50px 50px 0px 0px;
-  background: rgba(214, 214, 214, 0.25);
+  background: #ececec;
+  position: relative;
+  top: -95px;
+  z-index: 0;
 }
 
 .section_menu h1 {
-  padding-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+.section_menu .btn_coeur, .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .section_menu .btn_coeur_white:hover, .section_menu .btn_coeur_white:hover {
+  color: transparent;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  z-index: 0;
+  top: 45px;
+  font-size: 2rem;
+  right: 19.5px;
+}
+
+.section_menu .btn_coeur_white {
+  z-index: 1;
+  position: absolute;
+  font-size: 2rem;
+  top: 45px;
+  right: 19.5px;
 }
 
 .section_menu h2 {
@@ -316,8 +355,15 @@ footer ul a {
 .section_menu article .a {
   background-color: #fff;
   border-radius: 15px;
+  margin-top: 12px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 60px;
+}
+
+.section_menu article .a p {
+  padding-top: 12px;
+  margin: 0;
 }
 
 .section_menu article .flex {
@@ -330,7 +376,7 @@ footer ul a {
 }
 
 .section_menu article .gras {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .btn_acceuil, .btn {
@@ -338,8 +384,10 @@ footer ul a {
   text-decoration: none;
   background: linear-gradient(170deg, #FF79DA 2%, #9356DC 100%);
   height: 30px;
-  width: 185px;
+  width: 200px;
   color: white;
+  font-size: 0.9em;
+  font-weight: bold;
   border-radius: 25px;
   border: #9356DC;
   margin: auto;
