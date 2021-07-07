@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -15,7 +16,7 @@ body a {
 
 .header_acceuil {
   text-align: center;
-  background-color: rgba(214, 214, 214, 0.25);
+  background-color: #f3f3f3;
   width: 430px;
   margin: auto;
   height: 350px;
@@ -31,8 +32,8 @@ body a {
 }
 
 .header_acceuil .localisation {
-  border-top: 3px solid rgba(189, 189, 189, 0.25);
-  background-color: rgba(189, 189, 189, 0.25);
+  border-top: 3px solid silver;
+  background-color: #dadada;
   height: 40px;
 }
 
@@ -85,29 +86,29 @@ body a {
 }
 
 .filtres {
-  background-color: white;
+  width: 430px;
+  margin: auto;
 }
 
 .filtres h2 {
-  padding-top: 50px;
-  text-align: left;
   margin-left: 10%;
+  margin-top: 10%;
 }
 
-.filtres .case_g {
+.filtres .case_g, .filtres .case_v, .filtres .case_g:hover {
   height: 55px;
   padding-top: 5px;
-  background-color: rgba(214, 214, 214, 0.25);
+  background-color: #f3f3f3;
   border-radius: 15px;
   width: 330px;
-  margin: auto;
+  margin-left: 12%;
   margin-bottom: 15px;
   -webkit-box-shadow: 3px 3px 5px #c3c3c3;
           box-shadow: 3px 3px 5px #c3c3c3;
   position: relative;
 }
 
-.filtres .case_g::before {
+.filtres .case_g::before, .filtres .case_v::before, .filtres .case_g:hover::before {
   content: attr(data-count);
   position: absolute;
   background: #9356DC;
@@ -122,43 +123,19 @@ body a {
   line-height: 20px;
 }
 
-.filtres .case_g p {
+.filtres .case_g p, .filtres .case_v p, .filtres .case_g:hover p {
   text-align: left;
   font-weight: bold;
 }
 
-.filtres .case_g i {
+.filtres .case_g i, .filtres .case_v i, .filtres .case_g:hover i {
   margin-left: 25px;
   margin-right: 25px;
   color: #666666;
 }
 
 .filtres .case_v, .filtres .case_g:hover {
-  height: 55px;
-  padding-top: 5px;
   background-color: #f2eafb;
-  border-radius: 15px;
-  width: 330px;
-  margin: auto;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 3px 3px 5px #c3c3c3;
-          box-shadow: 3px 3px 5px #c3c3c3;
-  position: relative;
-}
-
-.filtres .case_v::before, .filtres .case_g:hover::before {
-  content: attr(data-count);
-  position: absolute;
-  background: #9356DC;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  top: 20px;
-  left: -10px;
-  border-radius: 50%;
-  color: white;
-  font-size: 0.7rem;
-  line-height: 20px;
 }
 
 .filtres .case_v p, .filtres .case_g:hover p {
@@ -173,9 +150,9 @@ body a {
 }
 
 .menu {
-  background-color: rgba(214, 214, 214, 0.25);
+  background-color: #f3f3f3;
   width: 430px;
-  height: 1350px;
+  height: 1450px;
   margin: auto;
 }
 
@@ -307,7 +284,7 @@ footer {
   width: 430px;
   height: 170px;
   position: relative;
-  top: -20px;
+  top: -120px;
 }
 
 footer .logo_white {
@@ -348,12 +325,23 @@ footer ul a {
   color: white;
 }
 
+.btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.lapalette_dugout {
+  margin: auto;
+  width: 430px;
+}
+
 .header_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 20px;
 }
 
@@ -362,27 +350,35 @@ footer ul a {
   margin: auto;
 }
 
-.image {
-  display: block;
-  width: 100%;
+.img_lapalette_dugout {
   margin: auto;
+  width: 430px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
-.section_menu {
-  width: 100%;
+.section_menu, .menu_lanote_enchante .section_menu, .menu_delice_des_sens .section_menu {
+  margin: auto;
+  width: 430px;
+  height: 1150px;
   border-radius: 50px 50px 0px 0px;
-  background: #ececec;
+  background: #f3f3f3;
   position: relative;
-  top: -95px;
-  z-index: 0;
+  top: -100px;
 }
 
-.section_menu h1 {
+.section_menu h1, .menu_lanote_enchante .section_menu h1, .menu_delice_des_sens .section_menu h1 {
   padding-top: 40px;
   padding-left: 20px;
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
-.section_menu .btn_coeur, .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .section_menu .btn_coeur_white:hover, .section_menu .btn_coeur_white:hover {
+.section_menu .btn_coeur, .menu_lanote_enchante .section_menu .btn_coeur, .menu_delice_des_sens .section_menu .btn_coeur, .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .section_menu .btn_coeur_white:hover, .section_menu .btn_coeur_white:hover {
   color: transparent;
   background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
@@ -391,42 +387,52 @@ footer ul a {
   z-index: 0;
   top: 45px;
   font-size: 2rem;
-  right: 19.5px;
+  right: 10%;
 }
 
-.section_menu .btn_coeur_white {
+.section_menu .btn_coeur_white, .menu_lanote_enchante .section_menu .btn_coeur_white, .menu_delice_des_sens .section_menu .btn_coeur_white {
   z-index: 1;
+  background: #f3f3f3;
   position: absolute;
   font-size: 2rem;
   top: 45px;
-  right: 19.5px;
+  right: 10%;
 }
 
-.section_menu h2 {
+.section_menu h2, .menu_lanote_enchante .section_menu h2, .menu_delice_des_sens .section_menu h2 {
   border-bottom: 3px solid #99E2D0;
-  width: 50px;
+  width: 60px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #4d4d4d;
 }
 
-.section_menu article {
+.section_menu article, .menu_lanote_enchante .section_menu article, .menu_delice_des_sens .section_menu article {
   width: 90%;
   margin-left: 20px;
 }
 
-.section_menu article .a {
+.section_menu article .a, .menu_lanote_enchante .section_menu article .a, .menu_delice_des_sens .section_menu article .a {
   background-color: #fff;
   border-radius: 15px;
   margin-top: 12px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 60px;
+  height: 70px;
 }
 
-.section_menu article .a p {
-  padding-top: 12px;
+.section_menu article .a h3, .menu_lanote_enchante .section_menu article .a h3, .menu_delice_des_sens .section_menu article .a h3 {
+  padding-top: 10px;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.section_menu article .a p, .menu_lanote_enchante .section_menu article .a p, .menu_delice_des_sens .section_menu article .a p {
+  padding-top: 5px;
   margin: 0;
 }
 
-.section_menu article .flex {
+.section_menu article .flex, .menu_lanote_enchante .section_menu article .flex, .menu_delice_des_sens .section_menu article .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,12 +441,86 @@ footer ul a {
           justify-content: space-between;
 }
 
-.section_menu article .gras {
-  font-weight: 700;
+.section_menu article .gras, .menu_lanote_enchante .section_menu article .gras, .menu_delice_des_sens .section_menu article .gras {
+  padding-right: 10px;
+  font-weight: bold;
 }
 
-.btn {
-  text-align: center;
-  margin-top: 40px;
+.menu_la_française {
+  margin: auto;
+  width: 430px;
+}
+
+.menu_la_française .img_a_lafrancaise {
+  margin: auto;
+  width: 100%;
+  height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.menu_lanote_enchante {
+  margin: auto;
+  width: 430px;
+}
+
+.menu_lanote_enchante .img_lanote_enchante {
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.menu_lanote_enchante .section_menu, .menu_lanote_enchante .menu_delice_des_sens .section_menu, .menu_delice_des_sens .menu_lanote_enchante .section_menu {
+  top: -85px;
+  height: 1330px;
+}
+
+.menu_lanote_enchante .btn_coeur, .menu_lanote_enchante .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .menu_lanote_enchante .btn_coeur_white:hover, .menu_lanote_enchante .section_menu .btn_coeur_white:hover, .section_menu .menu_lanote_enchante .btn_coeur_white:hover {
+  color: transparent;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  z-index: 0;
+  top: 45px;
+  font-size: 2rem;
+  right: 10%;
+}
+
+.menu_delice_des_sens {
+  margin: auto;
+  width: 430px;
+}
+
+.menu_delice_des_sens .img_delice {
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.menu_delice_des_sens .menu_lanote_enchante .section_menu, .menu_lanote_enchante .menu_delice_des_sens .section_menu, .menu_delice_des_sens .section_menu {
+  top: -90px;
+}
+
+.menu_delice_des_sens .btn_coeur, .menu_delice_des_sens .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .menu_delice_des_sens .btn_coeur_white:hover, .menu_delice_des_sens .section_menu .btn_coeur_white:hover, .section_menu .menu_delice_des_sens .btn_coeur_white:hover {
+  color: transparent;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  z-index: 0;
+  top: 45px;
+  font-size: 2rem;
+  right: 10%;
 }
 /*# sourceMappingURL=style.css.map */
