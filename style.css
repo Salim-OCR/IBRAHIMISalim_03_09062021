@@ -531,12 +531,17 @@ footer ul a {
   .conteneur .header_acceuil h1 {
     width: 100%;
   }
+  .conteneur .header_acceuil .btn_acceuil, .conteneur .header_acceuil .btn {
+    margin-top: 50px;
+  }
   .conteneur .filtres {
     width: 90%;
+    margin-bottom: 20px;
   }
   .conteneur .filtres h2 {
     margin-top: 0;
     margin-left: 0;
+    margin-top: 20px;
   }
   .conteneur .filtres .flex_space {
     display: -webkit-box;
@@ -587,16 +592,18 @@ footer ul a {
         justify-content: space-around;
     margin: auto;
   }
-  footer {
+  .conteneur footer {
     width: auto;
     top: -15px;
   }
-  footer .logo_white {
+  .conteneur footer .logo_white {
     text-align: center;
     width: auto;
+    font-size: 2rem;
   }
-  footer ul {
-    width: 60%;
+  .conteneur footer ul {
+    width: 80%;
+    margin: auto;
     margin-top: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -606,6 +613,331 @@ footer ul a {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .lapalette_dugout {
+    width: auto;
+  }
+  .lapalette_dugout img {
+    width: 30%;
+  }
+  .lapalette_dugout .img_lapalette_dugout {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 55%;
+       object-position: center 55%;
+    height: 500px;
+    margin-top: 20px;
+  }
+  .lapalette_dugout .section_menu, .lapalette_dugout .menu_lanote_enchante .section_menu, .menu_lanote_enchante .lapalette_dugout .section_menu, .lapalette_dugout .menu_delice_des_sens .section_menu, .menu_delice_des_sens .lapalette_dugout .section_menu {
+    width: auto;
+    height: auto;
+    position: static;
+    border-radius: 0%;
+    position: relative;
+  }
+  .lapalette_dugout .section_menu .btn_coeur, .lapalette_dugout .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .lapalette_dugout .section_menu .btn_coeur_white:hover, .lapalette_dugout .section_menu .btn_coeur_white:hover {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .lapalette_dugout .section_menu .btn_coeur_white {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .lapalette_dugout .section_menu h1, .lapalette_dugout .menu_lanote_enchante .section_menu h1, .menu_lanote_enchante .lapalette_dugout .section_menu h1, .lapalette_dugout .menu_delice_des_sens .section_menu h1, .menu_delice_des_sens .lapalette_dugout .section_menu h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .lapalette_dugout .section_menu article, .lapalette_dugout .menu_lanote_enchante .section_menu article, .menu_lanote_enchante .lapalette_dugout .section_menu article, .lapalette_dugout .menu_delice_des_sens .section_menu article, .menu_delice_des_sens .lapalette_dugout .section_menu article {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .lapalette_dugout .section_menu article .a {
+    height: 90px;
+  }
+  .lapalette_dugout .section_menu article .a h3 {
+    font-size: 1.5rem;
+  }
+  .lapalette_dugout .btn {
+    font-size: 1.5rem;
+    height: auto;
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  .lapalette_dugout footer {
+    width: auto;
+    top: -15px;
+  }
+  .lapalette_dugout footer .logo_white {
+    text-align: center;
+    width: auto;
+    font-size: 2rem;
+  }
+  .lapalette_dugout footer ul {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .menu_la_française {
+    width: auto;
+  }
+  .menu_la_française img {
+    width: 30%;
+  }
+  .menu_la_française .img_a_lafrancaise {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 70%;
+       object-position: center 70%;
+    height: 500px;
+    margin-top: 20px;
+  }
+  .menu_la_française .section_menu, .menu_la_française .menu_lanote_enchante .section_menu, .menu_lanote_enchante .menu_la_française .section_menu, .menu_la_française .menu_delice_des_sens .section_menu, .menu_delice_des_sens .menu_la_française .section_menu {
+    width: auto;
+    height: auto;
+    position: static;
+    border-radius: 0%;
+    position: relative;
+  }
+  .menu_la_française .section_menu .btn_coeur, .menu_la_française .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .menu_la_française .section_menu .btn_coeur_white:hover, .menu_la_française .section_menu .btn_coeur_white:hover {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_la_française .section_menu .btn_coeur_white {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_la_française .section_menu h1, .menu_la_française .menu_lanote_enchante .section_menu h1, .menu_lanote_enchante .menu_la_française .section_menu h1, .menu_la_française .menu_delice_des_sens .section_menu h1, .menu_delice_des_sens .menu_la_française .section_menu h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .menu_la_française .section_menu article, .menu_la_française .menu_lanote_enchante .section_menu article, .menu_lanote_enchante .menu_la_française .section_menu article, .menu_la_française .menu_delice_des_sens .section_menu article, .menu_delice_des_sens .menu_la_française .section_menu article {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .menu_la_française .section_menu article .a {
+    height: 90px;
+  }
+  .menu_la_française .section_menu article .a h3 {
+    font-size: 1.5rem;
+  }
+  .menu_la_française .btn {
+    font-size: 1.5rem;
+    height: auto;
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  .menu_la_française footer {
+    width: auto;
+    top: -15px;
+  }
+  .menu_la_française footer .logo_white {
+    text-align: center;
+    width: auto;
+    font-size: 2rem;
+  }
+  .menu_la_française footer ul {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .menu_lanote_enchante {
+    width: auto;
+  }
+  .menu_lanote_enchante img {
+    width: 30%;
+  }
+  .menu_lanote_enchante .img_lanote_enchante {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 55%;
+       object-position: center 55%;
+    height: 500px;
+    margin-top: 20px;
+  }
+  .menu_lanote_enchante .section_menu, .menu_lanote_enchante .menu_delice_des_sens .section_menu, .menu_delice_des_sens .menu_lanote_enchante .section_menu {
+    width: auto;
+    height: auto;
+    position: static;
+    border-radius: 0%;
+    position: relative;
+  }
+  .menu_lanote_enchante .section_menu .btn_coeur, .menu_lanote_enchante .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .menu_lanote_enchante .section_menu .btn_coeur_white:hover, .menu_lanote_enchante .section_menu .btn_coeur_white:hover {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_lanote_enchante .section_menu .btn_coeur_white {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_lanote_enchante .section_menu h1, .menu_lanote_enchante .menu_delice_des_sens .section_menu h1, .menu_delice_des_sens .menu_lanote_enchante .section_menu h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .menu_lanote_enchante .section_menu article, .menu_lanote_enchante .menu_delice_des_sens .section_menu article, .menu_delice_des_sens .menu_lanote_enchante .section_menu article {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .menu_lanote_enchante .section_menu article .a {
+    height: 90px;
+  }
+  .menu_lanote_enchante .section_menu article .a h3 {
+    font-size: 1.5rem;
+  }
+  .menu_lanote_enchante .btn {
+    font-size: 1.5rem;
+    height: auto;
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  .menu_lanote_enchante footer {
+    width: auto;
+    top: -15px;
+  }
+  .menu_lanote_enchante footer .logo_white {
+    text-align: center;
+    width: auto;
+    font-size: 2rem;
+  }
+  .menu_lanote_enchante footer ul {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .menu_delice_des_sens {
+    width: auto;
+  }
+  .menu_delice_des_sens img {
+    width: 30%;
+  }
+  .menu_delice_des_sens .img_delice {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 70%;
+       object-position: center 70%;
+    height: 500px;
+    margin-top: 20px;
+  }
+  .menu_delice_des_sens .menu_lanote_enchante .section_menu, .menu_lanote_enchante .menu_delice_des_sens .section_menu, .menu_delice_des_sens .section_menu {
+    width: auto;
+    height: auto;
+    position: static;
+    border-radius: 0%;
+    position: relative;
+  }
+  .menu_delice_des_sens .section_menu .btn_coeur, .menu_delice_des_sens .section_menu .menu .menu_acceuil div h3 .btn_coeur_white:hover, .menu .menu_acceuil div h3 .menu_delice_des_sens .section_menu .btn_coeur_white:hover, .menu_delice_des_sens .section_menu .btn_coeur_white:hover {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_delice_des_sens .section_menu .btn_coeur_white {
+    text-align: center;
+    left: 50%;
+    top: 130px;
+    width: 33px;
+  }
+  .menu_delice_des_sens .menu_lanote_enchante .section_menu h1, .menu_lanote_enchante .menu_delice_des_sens .section_menu h1, .menu_delice_des_sens .section_menu h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .menu_delice_des_sens .menu_lanote_enchante .section_menu article, .menu_lanote_enchante .menu_delice_des_sens .section_menu article, .menu_delice_des_sens .section_menu article {
+    width: 80%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .menu_delice_des_sens .section_menu article .a {
+    height: 90px;
+  }
+  .menu_delice_des_sens .section_menu article .a h3 {
+    font-size: 1.5rem;
+  }
+  .menu_delice_des_sens .btn {
+    font-size: 1.5rem;
+    height: auto;
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  .menu_delice_des_sens footer {
+    width: auto;
+    top: -15px;
+  }
+  .menu_delice_des_sens footer .logo_white {
+    text-align: center;
+    width: auto;
+    font-size: 2rem;
+  }
+  .menu_delice_des_sens footer ul {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

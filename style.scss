@@ -507,24 +507,26 @@ footer{
         
      }
 }
-
 // ****************************SECTION RESPONSIVE******************************************************
-
-
-
 @media  screen and (min-width: 600px) {
     .conteneur{
          .header_acceuil{
              width: 100%;
              h1{
                  width: 100%;
-             }
+            }
+            .btn_acceuil{
+                margin-top: 50px;
+            }
+
         }
         .filtres{
             width: 90%;
+            margin-bottom: 20px;
             h2{
                 margin-top: 0;
                 margin-left: 0;
+                margin-top: 20px;
             }
             .flex_space{
                 display: flex;
@@ -561,22 +563,325 @@ footer{
                 justify-content: space-around;
                 margin: auto;
             }
-        } 
-    }
-    footer{
-        width: auto;
-        top: -15px;
-        .logo_white{
-            text-align: center;
+        }
+        footer{
             width: auto;
-        }
-        ul{
-            width: 60%;
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
     } 
 }
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px){
+    .lapalette_dugout{
+        width: auto;
+        img{
+            width: 30%;
+        }
+        .img_lapalette_dugout{
+            width: 100%;
+            object-fit: cover;
+            object-position: center 55%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .section_menu{
+            width: auto;
+            height: auto;
+            position: static;
+            border-radius: 0%;
+            position: relative;
+            .btn_coeur{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            .btn_coeur_white{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            article{
+                width: 80%;
+                margin: auto;
+                font-size: 1.3rem;
+                .a{
+                    height: 90px;
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+    
+        }
+        .btn{
+            font-size: 1.5rem;
+            height: auto;
+            width: 250px;
+            padding-bottom: 10px;
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    }  
+}
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px){
+    .menu_la_française{
+        width: auto;
+        img{
+            width: 30%;
+        }
+        .img_a_lafrancaise{
+            width: 100%;
+            object-fit: cover;
+            object-position: center 70%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .section_menu{
+            width: auto;
+            height: auto;
+            position: static;
+            border-radius: 0%;
+            position: relative;
+            .btn_coeur{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            .btn_coeur_white{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            article{
+                width: 80%;
+                margin: auto;
+                font-size: 1.3rem;
+                .a{
+                    height: 90px;
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+    
+        }
+        .btn{
+            font-size: 1.5rem;
+            height: auto;
+            width: 250px;
+            padding-bottom: 10px;
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    }  
+}
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px){
+    .menu_lanote_enchante{
+        width: auto;
+        img{
+            width: 30%;
+        }
+        .img_lanote_enchante{
+            width: 100%;
+            object-fit: cover;
+            object-position: center 55%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .section_menu{
+            width: auto;
+            height: auto;
+            position: static;
+            border-radius: 0%;
+            position: relative;
+            .btn_coeur{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            .btn_coeur_white{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            article{
+                width: 80%;
+                margin: auto;
+                font-size: 1.3rem;
+                .a{
+                    height: 90px;
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+    
+        }
+        .btn{
+            font-size: 1.5rem;
+            height: auto;
+            width: 250px;
+            padding-bottom: 10px;
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    }  
+}
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px){
+    .menu_delice_des_sens{
+        width: auto;
+        img{
+            width: 30%;
+        }
+        .img_delice{
+            width: 100%;
+            object-fit: cover;
+            object-position: center 70%;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .section_menu{
+            width: auto;
+            height: auto;
+            position: static;
+            border-radius: 0%;
+            position: relative;
+            .btn_coeur{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            .btn_coeur_white{
+                text-align: center;
+                left: 50%;
+                top: 130px;
+                width: 33px;
+            }
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            article{
+                width: 80%;
+                margin: auto;
+                font-size: 1.3rem;
+                .a{
+                    height: 90px;
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+    
+        }
+        .btn{
+            font-size: 1.5rem;
+            height: auto;
+            width: 250px;
+            padding-bottom: 10px;
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    }  
+}
+// ****************************SECTION RESPONSIVE******************************************************
