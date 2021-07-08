@@ -330,6 +330,224 @@ footer ul a {
   margin-top: 40px;
 }
 
+.loader {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.lettre {
+  color: #FF79DA;
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin-top: 310px;
+  -webkit-animation: flash 1.3s linear 3;
+          animation: flash 1.3s linear 3;
+  opacity: 0;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    opacity: 1;
+  }
+  90% {
+    color: #99E2D0;
+    text-shadow: none;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    opacity: 1;
+  }
+  90% {
+    color: #99E2D0;
+    text-shadow: none;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+    opacity: 1;
+  }
+}
+
+.lettre:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.lettre:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: absolute;
+  top: 280px;
+  right: 100px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 40px 40px;
+          transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-animation: lds-heart 1.2s 3;
+          animation: lds-heart 1.2s 3;
+  opacity: 0;
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@-webkit-keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 1;
+  }
+}
+
+@keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 1;
+  }
+}
+
 .lapalette_dugout {
   margin: auto;
   width: 430px;
