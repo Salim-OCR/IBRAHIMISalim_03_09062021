@@ -77,6 +77,8 @@ body a {
   margin: auto;
   padding-top: 10px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .btn_acceuil:hover, .btn:hover {
@@ -342,7 +344,6 @@ footer ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
 }
 
 .lettre {
@@ -350,8 +351,8 @@ footer ul a {
   font-size: 30px;
   letter-spacing: 10px;
   margin-top: 310px;
-  -webkit-animation: flash 1.3s linear 3;
-          animation: flash 1.3s linear 3;
+  -webkit-animation: flash 1.3s linear 5;
+          animation: flash 1.3s linear 5;
   opacity: 0;
 }
 
@@ -370,8 +371,6 @@ footer ul a {
   100% {
     color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
     opacity: 1;
   }
 }
@@ -391,8 +390,6 @@ footer ul a {
   100% {
     color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
     opacity: 1;
   }
 }
@@ -447,104 +444,81 @@ footer ul a {
           animation-delay: 1s;
 }
 
-.lds-heart {
-  display: inline-block;
+.lds-ellipsis div {
   position: absolute;
-  top: 280px;
-  right: 100px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 40px 40px;
-          transform-origin: 40px 40px;
+  top: 360px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
-.lds-heart div {
-  top: 32px;
-  left: 32px;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
-  -webkit-animation: lds-heart 1.2s 3;
-          animation: lds-heart 1.2s 3;
+.lds-ellipsis div:nth-child(1) {
+  right: 50%;
+  -webkit-animation: lds-ellipsis1 0.5s 15;
+          animation: lds-ellipsis1 0.5s 15;
+  background: #9356DC;
   opacity: 0;
 }
 
-.lds-heart div:after,
-.lds-heart div:before {
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 32px;
-  height: 32px;
+.lds-ellipsis div:nth-child(2) {
+  right: 50%;
+  -webkit-animation: lds-ellipsis2 0.5s 15;
+          animation: lds-ellipsis2 0.5s 15;
   background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+  opacity: 0;
 }
 
-.lds-heart div:before {
-  left: -24px;
-  border-radius: 50% 0 0 50%;
-}
-
-.lds-heart div:after {
-  top: -24px;
-  border-radius: 50% 50% 0 0;
-}
-
-@-webkit-keyframes lds-heart {
+@-webkit-keyframes lds-ellipsis1 {
   0% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: scale(0);
+            transform: scale(0);
     opacity: 1;
-  }
-  5% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  39% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
   }
   100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
   }
 }
 
-@keyframes lds-heart {
+@keyframes lds-ellipsis1 {
   0% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: scale(0);
+            transform: scale(0);
     opacity: 1;
-  }
-  5% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  39% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
   }
   100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
     opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+    opacity: 0.5;
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+    opacity: 0.5;
   }
 }
 
