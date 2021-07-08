@@ -82,6 +82,11 @@ body{
 
 
 
+
+
+
+
+// ****************************FILTRES*************************************************
 .filtres{
     width: 430px;
     margin: auto;
@@ -163,10 +168,18 @@ body{
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 // ****************************SECTION ACCEUIL******************************************************
-
-
-
 .menu{
     background-color: $fond_gris;
     width: 430px;
@@ -274,9 +287,6 @@ body{
 
 
 // *************************FOOTER*************************
-
-
-
 footer{
     background-color: lighten(black, 20);
     color: white;
@@ -319,12 +329,15 @@ footer{
     }
 }
 
+
+
+
+
+
+
+
+
 // ****************************BOUTON******************************************************
-
-
-
-
-
 // .btn_bkg{
 //     @extend .btn_acceuil;
 //     position: relative;
@@ -337,6 +350,16 @@ footer{
     text-align: center;
     margin-top: 40px;
 }
+
+// ****************************BOUTON*****ANIMATION****COEUR*************************************************
+
+// Le btn en forme de coeur doit se remplir progressivement, l'effet peut-être apparaître en survol sur desktop au lieu du clic.....................
+
+
+
+
+
+
 
 
 
