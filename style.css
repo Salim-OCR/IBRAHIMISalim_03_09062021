@@ -10,9 +10,39 @@ body a {
   cursor: default;
 }
 
-#conteneur {
+.conteneur {
   margin: auto;
-  max-width: 599px;
+  opacity: 1;
+  -webkit-animation: loading_acceuil 4s linear;
+          animation: loading_acceuil 4s linear;
+}
+
+@-webkit-keyframes loading_acceuil {
+  0% {
+    opacity: 0;
+    background: #f3f3f3;
+  }
+  90% {
+    opacity: 0.9;
+    background: #f3f3f3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading_acceuil {
+  0% {
+    opacity: 0;
+    background: #f3f3f3;
+  }
+  90% {
+    opacity: 0.9;
+    background: #f3f3f3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header_acceuil {
@@ -64,6 +94,8 @@ body a {
 }
 
 .btn_acceuil, .btn {
+  position: relative;
+  z-index: 1;
   display: block;
   text-decoration: none;
   background: linear-gradient(170deg, #FF79DA 2%, #9356DC 100%);
@@ -78,8 +110,6 @@ body a {
   margin: auto;
   padding-top: 10px;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
 }
 
 .btn_acceuil:hover, .btn:hover {
@@ -292,7 +322,7 @@ body a {
 
 .menu .menu_acceuil div h3 .btn_coeur_white {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   background: white;
   font-size: 1.3rem;
   right: 30px;
@@ -340,7 +370,8 @@ footer {
   width: 430px;
   height: 170px;
   position: relative;
-  top: -120px;
+  top: 100px;
+  z-index: 0;
 }
 
 footer .logo_white {
@@ -376,9 +407,10 @@ footer ul li .pp {
   margin-left: 9px;
 }
 
-footer ul a {
+footer ul .mail {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .btn {
@@ -388,7 +420,10 @@ footer ul a {
 
 .loader {
   position: absolute;
+  top: 220px;
   width: 100%;
+  margin: auto;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,9 +439,9 @@ footer ul a {
   color: #FF79DA;
   font-size: 30px;
   letter-spacing: 10px;
-  margin-top: 310px;
-  -webkit-animation: flash 1.3s linear 5;
-          animation: flash 1.3s linear 5;
+  margin-top: 100px;
+  -webkit-animation: flash 3s linear;
+          animation: flash 3s linear;
   opacity: 0;
 }
 
@@ -510,16 +545,16 @@ footer ul a {
 
 .lds-ellipsis div:nth-child(1) {
   right: 50%;
-  -webkit-animation: lds-ellipsis1 0.5s 15;
-          animation: lds-ellipsis1 0.5s 15;
+  -webkit-animation: lds-ellipsis1 1s linear 3;
+          animation: lds-ellipsis1 1s linear 3;
   background: #9356DC;
   opacity: 0;
 }
 
 .lds-ellipsis div:nth-child(2) {
   right: 50%;
-  -webkit-animation: lds-ellipsis2 0.5s 15;
-          animation: lds-ellipsis2 0.5s 15;
+  -webkit-animation: lds-ellipsis2 1s linear 3;
+          animation: lds-ellipsis2 1s linear 3;
   background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
   opacity: 0;
 }
@@ -633,16 +668,31 @@ footer ul a {
   z-index: 0;
   top: 45px;
   font-size: 2rem;
-  right: 10%;
+  right: 43px;
+  cursor: pointer;
+  -webkit-animation: coeur_complet 3s linear infinite;
+          animation: coeur_complet 3s linear infinite;
+}
+
+@keyframes coeur_complet {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .section_menu .btn_coeur_white, .menu_lanote_enchante .section_menu .btn_coeur_white, .menu_delice_des_sens .section_menu .btn_coeur_white {
-  z-index: 1;
+  z-index: 0;
   background: #f3f3f3;
   position: absolute;
+  cursor: pointer;
   font-size: 2rem;
   top: 45px;
-  right: 10%;
+  right: 43px;
 }
 
 .section_menu h2, .menu_lanote_enchante .section_menu h2, .menu_delice_des_sens .section_menu h2 {
