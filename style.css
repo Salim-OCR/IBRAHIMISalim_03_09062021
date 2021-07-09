@@ -7,6 +7,7 @@ body a {
   list-style-type: none;
   text-decoration: none;
   color: black;
+  cursor: default;
 }
 
 #conteneur {
@@ -260,8 +261,33 @@ body a {
   position: absolute;
   right: 30px;
   bottom: 30px;
+  cursor: pointer;
   z-index: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  -webkit-animation: coeur_complet 1.3s linear infinite;
+          animation: coeur_complet 1.3s linear infinite;
+}
+
+@-webkit-keyframes coeur_complet {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes coeur_complet {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .menu .menu_acceuil div h3 .btn_coeur_white {
@@ -271,6 +297,34 @@ body a {
   font-size: 1.3rem;
   right: 30px;
   bottom: 30px;
+  cursor: pointer;
+}
+
+.menu .menu_acceuil div h3 .btn_coeur_white:hover {
+  -webkit-animation: coeur_w 1.2s linear;
+          animation: coeur_w 1.2s linear;
+}
+
+@-webkit-keyframes coeur_w {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(2.2);
+            transform: scale(2.2);
+  }
+}
+
+@keyframes coeur_w {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(2.2);
+            transform: scale(2.2);
+  }
 }
 
 .menu .menu_acceuil div p {

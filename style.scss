@@ -12,6 +12,7 @@ body{
         list-style-type: none;
         text-decoration: none;
         color: black;
+        cursor: default;
     }
 }
 #conteneur{
@@ -258,9 +259,19 @@ body{
                     position: absolute;
                     right: 30px;
                     bottom: 30px;
+                    cursor: pointer;
                     z-index: 0;
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
+                    animation: coeur_complet 1.3s linear infinite;
                  }
+                 @keyframes coeur_complet {
+                        0%{
+                            transform: scale(0);
+                        }
+                        100%{
+                            transform: scale(1.1);  
+                        }
+                }
                 .btn_coeur_white{
                     position: absolute;
                     z-index: 1;
@@ -268,8 +279,19 @@ body{
                     font-size: 1.3rem;
                     right: 30px;
                     bottom: 30px;
+                    cursor: pointer;
                     &:hover{
                         @extend .btn_coeur;
+                        animation: coeur_w 1.2s linear;
+                        //  font-size: 1.2rem;
+                    }
+                    @keyframes coeur_w {
+                        0% {
+                            transform: scale(0);
+                        }
+                        100% {
+                          transform: scale(2.2);
+                        }
                     }
                 }
             }
