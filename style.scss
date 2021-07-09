@@ -192,18 +192,6 @@ body{
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 // ****************************SECTION ACCEUIL******************************************************
 .menu{
     // position: relative;
@@ -329,11 +317,6 @@ body{
         }
     }
 }
-
-
-
-
-
 // *************************FOOTER*************************
 footer{
     background-color: lighten(black, 20);
@@ -378,15 +361,6 @@ footer{
         }
     }
 }
-
-
-
-
-
-
-
-
-
 // ****************************BOUTON******************************************************
 // .btn_bkg{
 //     @extend .btn_acceuil;
@@ -404,6 +378,22 @@ footer{
 // ****************************BOUTON*****ANIMATION****COEUR*************************************************
 
 // Le btn en forme de coeur doit se remplir progressivement, l'effet peut-être apparaître en survol sur desktop au lieu du clic.....................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,7 +482,7 @@ footer{
 
 
 
-// **********************************************************************************************
+// ***************************************       **LOADING 2 POINTS******************************************************************
   .lds-ellipsis div {
     // width: 100%;
     // height: 270%;
@@ -563,9 +553,6 @@ footer{
   }
   
   
-
-
-
 
 
 
@@ -677,16 +664,98 @@ footer{
             }
         }
         .flex{
-            display: flex;
-            justify-content: space-between;
+             display: flex;
+             justify-content: space-between;
         }
 
-        .gras{
-            padding-right: 10px;
-            font-weight: bold;
-        }
+        // .gras{
+        //     padding-right: 10px;
+        //     font-weight: bold;
+        // }
     }  
 }
+
+
+
+
+
+
+
+
+
+
+// ******************************************************ANIMATION********************************** MENU*******************************************************************
+
+
+
+.a{
+    overflow: hidden;
+}
+.gras{
+    right: 0px;
+    height: 100%;
+    width: 100px;
+    background: $secondaire;
+    padding-right: 0px;
+    font-weight: bold;
+}
+.a:hover{
+    position: relative;
+    cursor: pointer;
+    .slide-left {
+        position: absolute;
+        right: -100px;
+        border-radius: 0px 15px 15px 0px;
+        width: 100px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  background: $tertiaire;
+        }
+        100% {
+          -webkit-transform: translateX(-100px);
+                  transform: translateX(-100px);
+                  background: $tertiaire;
+        }
+      }
+      @keyframes slide-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  background: $tertiaire;
+        }
+        100% {
+          -webkit-transform: translateX(-100px);
+                  transform: translateX(-100px);
+                  background: $tertiaire;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //**********************************SECTION MENU A LA FRANCAISE**********************************************************
 .menu_la_française{
     margin: auto;

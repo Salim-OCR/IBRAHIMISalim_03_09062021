@@ -737,9 +737,67 @@ footer ul .mail {
           justify-content: space-between;
 }
 
-.section_menu article .gras, .menu_lanote_enchante .section_menu article .gras, .menu_delice_des_sens .section_menu article .gras {
-  padding-right: 10px;
+.a {
+  overflow: hidden;
+}
+
+.gras {
+  right: 0px;
+  height: 100%;
+  width: 100px;
+  background: #FF79DA;
+  padding-right: 0px;
   font-weight: bold;
+}
+
+.a:hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.a:hover .slide-left {
+  position: absolute;
+  right: -100px;
+  border-radius: 0px 15px 15px 0px;
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    background: #99E2D0;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    background: #99E2D0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    background: #99E2D0;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    background: #99E2D0;
+  }
 }
 
 .menu_la_française {
