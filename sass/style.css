@@ -128,7 +128,7 @@ body a {
   margin-top: 10%;
 }
 
-.filtres .case_g, .filtres .case_v, .filtres .case_g:hover {
+.filtres .filtre_gray, .filtres .filtre_purple, .filtres .filtre_gray:hover {
   height: 55px;
   padding-top: 5px;
   background-color: #f3f3f3;
@@ -141,7 +141,7 @@ body a {
   position: relative;
 }
 
-.filtres .case_g::before, .filtres .case_v::before, .filtres .case_g:hover::before {
+.filtres .filtre_gray::before, .filtres .filtre_purple::before, .filtres .filtre_gray:hover::before {
   content: attr(data-count);
   position: absolute;
   background: #9356DC;
@@ -156,27 +156,27 @@ body a {
   line-height: 20px;
 }
 
-.filtres .case_g p, .filtres .case_v p, .filtres .case_g:hover p {
+.filtres .filtre_gray p, .filtres .filtre_purple p, .filtres .filtre_gray:hover p {
   text-align: left;
   font-weight: bold;
 }
 
-.filtres .case_g i, .filtres .case_v i, .filtres .case_g:hover i {
+.filtres .filtre_gray i, .filtres .filtre_purple i, .filtres .filtre_gray:hover i {
   margin-left: 25px;
   margin-right: 25px;
   color: #666666;
 }
 
-.filtres .case_v, .filtres .case_g:hover {
+.filtres .filtre_purple, .filtres .filtre_gray:hover {
   background-color: #f2eafb;
 }
 
-.filtres .case_v p, .filtres .case_g:hover p {
+.filtres .filtre_purple p, .filtres .filtre_gray:hover p {
   text-align: left;
   font-weight: bold;
 }
 
-.filtres .case_v i, .filtres .case_g:hover i {
+.filtres .filtre_purple i, .filtres .filtre_gray:hover i {
   color: #9356DC;
   margin-left: 25px;
   margin-right: 25px;
@@ -185,7 +185,7 @@ body a {
 .menu {
   background-color: #f3f3f3;
   width: 430px;
-  height: 1450px;
+  height: 1400px;
   margin: auto;
 }
 
@@ -331,8 +331,8 @@ body a {
 }
 
 .menu .menu_acceuil div h3 .btn_coeur_white:hover {
-  -webkit-animation: coeur_w 1.2s linear;
-          animation: coeur_w 1.2s linear;
+  -webkit-animation: coeur_w 1.4s linear;
+          animation: coeur_w 1.4s linear;
 }
 
 @-webkit-keyframes coeur_w {
@@ -370,7 +370,7 @@ footer {
   width: 430px;
   height: 170px;
   position: relative;
-  top: 100px;
+  top: -60px;
   z-index: 0;
 }
 
