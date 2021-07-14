@@ -1,0 +1,215 @@
+// *********************************************
+
+//                 SOMMAIRE RESTAURANT
+                        // HEADER
+
+// **********************************************
+
+@mixin sommaire_header {
+    text-align: center;
+    background-color: $fond_gris;
+    width: 430px;
+    margin: auto;
+    height: 350px;
+    .logo_header{
+        background-color: white;
+        img{
+            width: 160px;
+            margin-bottom: 15px;  
+        }
+    }
+    .localisation{
+        border-top: 3px solid darken($fond_gris, 20);
+        background-color: darken($fond_gris, 10);
+        height: 40px;
+        p{
+            margin:auto;
+            margin-top: 10px;
+            text-transform: capitalize;
+        }
+        i{
+            margin-right: 15px;
+        }
+        span{
+            margin-right: 20px;
+        }
+    } 
+    h1{
+        width: 350px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .lighten{
+        color: lighten(black, 40);
+        margin: auto;      
+    }
+}
+
+
+
+
+@mixin h2{
+    padding-top: 40px;
+    margin-left: 50px;
+}
+@mixin filtre_txt{
+    text-align: left;
+    font-weight: bold;
+}
+@mixin icons_margin {
+    margin-left: 25px;
+    margin-right: 25px ; 
+}
+@mixin restaurant {
+    background-color: $fond_gris;
+    width: 430px;
+    height: 1300px;
+    margin: auto;
+}
+@mixin images_restaurant{
+    img{
+        height: 175px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;       
+    }
+    .image1{
+        object-fit: cover;   
+        object-position: bottom;
+    }
+    .image2{
+        object-fit: cover;   
+        object-position: right 60%;
+    }
+    .image3{
+        object-fit: cover;   
+        object-position: left bottom;
+    }
+    .image4{
+        object-fit: cover;   
+        object-position: right bottom;
+    }
+}
+@mixin sommaire {
+    border-radius: 15px ;
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0px 2px 8px 0px rgb(184, 183, 183);
+    &:hover{
+        width: 90%;
+    }
+}
+@mixin h3 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+@mixin coeur_acceuil {
+    .btn_coeur{
+        color:transparent;
+        background: $coeur;
+       -webkit-background-clip: text;
+                background-clip: text;
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        cursor: pointer;
+        z-index: 0;
+        font-size: 1.3rem;
+        animation: coeur_complet 2s ease-in-out infinite;
+     }
+     @keyframes coeur_complet {
+            0%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(1.1);  
+            }
+    }
+    .btn_coeur_white{
+        position: absolute;
+        z-index: 0;
+        background: white;
+        font-size: 1.3rem;
+        right: 30px;
+        bottom: 30px;
+        cursor: pointer;
+        &:hover{
+            @extend .btn_coeur;
+            animation: coeur_w 1.3s 0.5s linear;
+        }
+        @keyframes coeur_w {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+              transform: scale(2.2);
+            }
+        }
+    }
+}
+@mixin txt_green {
+    background-color: $tertiaire;
+    color: darken($tertiaire, 35);
+    font-size: 0.83em;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+    position:absolute;
+    top: 5%;
+    right: 5%;
+}
+// *********************************************
+
+//                 FOOTER
+
+// **********************************************
+@mixin footer {
+    background-color: lighten(black, 20);
+    color: white;
+    margin: auto;
+    width: 430px;
+    height: 170px;
+    position: relative;
+    top: -60px;
+    z-index: 0;
+    .logo_white{
+        padding-top: 20px;
+        width: 80px;
+        margin-left: 35px;
+        font-family: 'Shrikhand', cursive;
+    }
+    ul{
+        list-style-type: none;
+        li{
+            margin-bottom: 5px;
+            .fourchette {
+                float: left;
+                font-size: 12px;
+                padding-top: 5px;
+            }
+            .poignet_de_mains{
+                @extend .fourchette;
+                font-size: 10px;
+            }
+            .p{
+                margin-left: 10px;
+            }
+            .pp{
+                @extend .p;
+                margin-left: 9px;
+            }
+        }
+        .mail{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
