@@ -1,8 +1,6 @@
 // *********************************************
-
-//                 SOMMAIRE RESTAURANT
-                        // HEADER
-
+//                  MIXIN 
+//                  HEADER PAGE D ACCEUIL
 // **********************************************
 
 @mixin sommaire_header {
@@ -48,24 +46,54 @@
 
 
 
+
+
+
+
+
+// *********************************************
+//                  MIXIN 
+//                  SECTION FILTRES
+// **********************************************
+
+
 @mixin h2{
     padding-top: 40px;
     margin-left: 50px;
 }
+
+
 @mixin filtre_txt{
     text-align: left;
     font-weight: bold;
 }
+
+
 @mixin icons_margin {
     margin-left: 25px;
     margin-right: 25px ; 
 }
+
+
+
+
+
+
+
+
+
+// *********************************************
+//                         MIXIN 
+//                  SOMMAIRE RESTAURANT
+// **********************************************
+
 @mixin restaurant {
     background-color: $fond_gris;
     width: 430px;
     height: 1300px;
     margin: auto;
 }
+
 @mixin images_restaurant{
     img{
         height: 175px;
@@ -89,6 +117,7 @@
         object-position: right bottom;
     }
 }
+
 @mixin sommaire {
     border-radius: 15px ;
     background-color: #fff;
@@ -108,6 +137,18 @@
     margin: auto;
     margin-top: 10px;
 }
+
+
+
+
+
+
+
+
+// *********************************************
+//                      MIXIN 
+//              SOMMAIRE COEUR ANIMATIONS
+// **********************************************
 @mixin coeur_acceuil {
     .btn_coeur{
         color:transparent;
@@ -152,6 +193,13 @@
         }
     }
 }
+
+
+
+// *********************************************
+//                          MIXIN 
+//                      TXT GREEN NOUVEAU
+// **********************************************
 @mixin txt_green {
     background-color: $tertiaire;
     color: darken($tertiaire, 35);
@@ -165,10 +213,10 @@
     top: 5%;
     right: 5%;
 }
+
+
 // *********************************************
-
 //                 FOOTER
-
 // **********************************************
 @mixin footer {
     background-color: lighten(black, 20);
@@ -211,5 +259,309 @@
             color: white;
             cursor: pointer;
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// *********************************************
+//                       MIXIN 
+//             PAGES DES MENUS dans MAIN
+// **********************************************
+
+@mixin position{
+    margin: auto;
+    width: 430px;
+}
+
+@mixin header{
+    display: flex;
+    flex-direction: column;
+    .header__logo{
+        display: flex;
+        justify-content: space-between;
+        .header--title{
+                width: 50%;
+                margin: auto;
+        }
+    }
+}
+
+
+
+// *********************************************
+//                       MIXIN 
+//                   IMAGES DU PLATS
+// **********************************************
+
+@mixin images_menus {
+    .lapalette_dugout{
+        @include position;
+        height: 340px;
+        object-fit: cover;
+        object-position: top ;  
+    }
+    .lanote_enchante{
+        @extend .lapalette_dugout;
+        object-fit: cover;
+        object-position: center ;
+    }
+    .a_lafrancaise{
+        @extend .lapalette_dugout;
+    }
+    .delice_des_sens{
+        @extend .lapalette_dugout;
+    }
+}
+
+// ************************************
+//      MIXIN SECTION BACKGROUND  
+// ************************************
+
+@mixin bg_menu {
+    height: 1250px;
+    border-radius: 50px 50px 0px 0px;
+    background: $fond_gris;
+    position: relative;
+    top: -100px;
+}
+
+// *********************************************             
+//          MIXIN  ANIMATION COEUR GEANT
+// **********************************************
+
+@mixin animation_coeur{
+    .btn_coeur{
+        color:transparent;
+        background: $coeur;
+       -webkit-background-clip: text;
+                background-clip: text;
+        position: absolute;
+        z-index: 0;
+        top: 70px;
+        font-size: 2rem;
+        right: 43px;
+        cursor: pointer;
+        animation: coeur_complet 3s 0.5s linear infinite;
+    }
+    @keyframes coeur_complet {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);  
+        }
+    }
+    .btn_coeur_white{
+        z-index: 0;
+        background: $fond_gris;
+        position: absolute;
+        cursor: pointer;
+        font-size: 2rem;
+        top: 70px;
+        right: 43px;
+        &:hover{
+            @extend .btn_coeur;    
+        }
+    }
+}
+
+
+// *********************************************
+//          MIXIN    ENTREES-PLATS-DESSERTS
+// **********************************************
+@mixin titre_principale{
+    padding-top: 40px ;
+    padding-left: 20px;
+    font-family: $font-family-title;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+@mixin titre_secondaire{
+    border-bottom: 3px solid $tertiaire;
+    width: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: lighten(black, 30);
+}
+
+@mixin titre_tertiaire {
+        padding-top: 10px;
+        margin: 0;
+        font-size: 1.1rem;
+}
+
+
+// *********************************************
+//          MIXIN  ANIMATION ICON CHECK
+// **********************************************
+
+@mixin animation_icon_check {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
+    color: $tertiaire;
+}
+@-webkit-keyframes rotate-center {
+0% {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+100% {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+@keyframes rotate-center {
+0% {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+100% {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+
+
+// *********************************************
+//          MIXIN  ANIMATION POINTIER LEFT
+// **********************************************
+@mixin pointier_left {
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+    z-index: 1;
+    background: white;
+    color: black;
+}
+
+
+// *********************************************
+//          MIXIN  ANIMATION PRIX LEFT
+// **********************************************
+@mixin prix_left{
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 1;
+    background: white;
+}
+
+// *********************************************
+//          MIXIN  ANIMATION SLIDE LEFT
+// **********************************************
+@mixin bordure_gauche {
+        position: absolute;
+        right: -100px;
+        border-radius: 0px 15px 15px 0px;
+        width: 100px;
+        height: 100%;
+        background: $tertiaire;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    @-webkit-keyframes slide-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  
+        }
+        100% {
+          -webkit-transform: translateX(-100px);
+                  transform: translateX(-100px);
+                  
+        }
+    }
+    @keyframes slide-left {
+        0% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+                  
+        }
+        100% {
+          -webkit-transform: translateX(-100px);
+                  transform: translateX(-100px);
+                  
+        }
+    }
+}
+
+
+
+// *********************************************
+//          MIXIN  ANIMATION SLIDE DOWN
+// **********************************************
+
+@mixin animation_slide_down {
+    .a {
+        -webkit-animation: a 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: a 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @-webkit-keyframes a {
+        0% {
+          -webkit-transform: translateY(-100px);
+                  transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+            opacity: 1;
+        }
+      }
+      @keyframes a {
+        0% {
+          -webkit-transform: translateY(-100px);
+                  transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+            opacity: 1;
+        }
+      }
+    .a:nth-child(1){
+        animation-delay: 0.1s;
+        opacity: 1;
+    }
+    .a:nth-child(2){
+        animation-delay: 0.2s;
+        opacity: 1;
+    }
+    .a:nth-child(3){
+        animation-delay: 0.3s;
+        opacity: 1;
+    }
+    .a:nth-child(4){
+        animation-delay: 0.4s;
+        opacity: 1;
+    }
+    .a:nth-child(5){
+        animation-delay: 0.5s;
+        opacity: 1;
+    }
+    .a:nth-child(6){
+        animation-delay: 0.6s;
+        opacity: 1;
+    }
+    .a:nth-child(7){
+        animation-delay: 0.7s;
+        opacity: 1;
+    }
+    .a:nth-child(8){
+        animation-delay: 0.8s;
+        opacity: 1;
     }
 }

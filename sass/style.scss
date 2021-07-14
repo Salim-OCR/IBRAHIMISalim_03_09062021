@@ -2,6 +2,12 @@
 @import './Utils/mixins'; 
 
 
+
+
+
+
+
+
 // *****************************************************
 //                        SOMMAIRE MENUS
 
@@ -15,6 +21,12 @@ body{
         cursor: default;
     }
 }
+
+// *****************************************************
+
+//               ANIMATION LOADER DANS LE CONTENEUR
+
+// *****************************************************
 .conteneur{
     margin: auto;
     opacity: 1;
@@ -34,620 +46,13 @@ body{
         opacity: 1;
     }
 }
-// *****************************************************
-//                        SOMMAIRE HEADER
 
-// *****************************************************
-.header_acceuil{
-    @include sommaire_header;
-}
-.btn_acceuil{
-    position: relative;
-    z-index: 1;
-    display:block;
-    text-decoration: none;
-    background: linear-gradient(170deg, $secondaire  2%, $primary 100%);
-    height: 30px;
-    width: 200px;
-    color: white;
-    font-size: 0.9em;
-    border-radius: 25px;
-    border: $primary;
-    box-shadow: 0px 2px 8px 0px rgb(184, 183, 183);
-    margin:auto;
-    padding-top: 10px;
-    cursor: pointer;
-    &:hover{ 
-        background: linear-gradient(170deg, $tertiaire 2%, $secondaire  100%);
-        box-shadow: 0px 10px 13px -7px $tertiaire, 0px 0px 3px 0px $primary;
-    }
-}
 
-// ****************************FILTRES*************************************************
+//*****************************ANIMATION RECHARGER************************************
 
-.filtres{
-    width: 430px;
-    margin: auto;
-    h2{
-        @include h2;
-    }
 
-    .filtre_gray{
-        height: 55px;
-        padding-top: 5px;
-        background-color: $fond_gris;
-        border-radius: 15px;
-        width: 330px;
-        margin-left: 12%;
-        margin-bottom: 15px;
-        box-shadow: 3px 3px 5px rgb(195, 195, 195);
-        position: relative;
-        &::before {
-            content: attr(data-count);
-            position: absolute;
-            background: $primary;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            top: 20px;
-            left: -10px;
-            border-radius: 50%;
-            color: white;
-            font-size: 0.7rem;
-            line-height: 20px;
+//*****************************ANIMATION RECHARGER************************************
 
-        }
-        &:hover{
-            @extend .filtre_purple;
-        }
-        p{
-            @include filtre_txt;
-        }
-        .icons{
-            @include icons_margin;
-            color: lighten(black, 40);  
-        }           
-    }
-    
-    .filtre_purple{
-        @extend .filtre_gray;
-        background-color: lighten($primary, 35);
-        p{
-            @include filtre_txt;
-        }
-        i{
-            @include icons_margin;
-            color: $primary;
-        }
-    }
-
-}
-
-
-// ****************************SOMMAIRE SECTION******************************************************
-
-.restaurants{
-    @include restaurant;
-    h2{
-        @include h2;
-    }
-}
-.acceuil{
-    @include sommaire;
-    @include images_restaurant;
-    .position_txt_green{
-        @include txt_green;
-    }
-    .position_txt_green1{
-        @extend .position_txt_green; 
-        top: 5%;
-    }
-    div{
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0 0 15px 15px;
-        margin-top: 0px;
-        h3{
-            @include h3;
-            @include coeur_acceuil;
-        }
-        p{
-            margin-left: 20px;
-            margin-top: 5px;
-            color: lighten(black, 30);
-        }
-    }
-}
-// **************************************************
-
-//                          SOMMAIRE FOOTER      
-
-// ************************************************************
-
-footer{
-    @include footer;
-}
-
-
-// *********************************************
-
-//                             BOUTON
-
-// *****************************************************************
-.btn{
-    @extend .btn_acceuil;
-    text-align: center;
-    margin-top: 40px;
-}
-
-
-  
-  
-
-
-
-
-//   *****************************************************
-  //                        PAGES DES REPAS
-  
-  // *****************************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-//********************SECTION MENU LA PALETTE DU GOUT **********************************************************
-@mixin position{
-    margin: auto;
-    width: 430px;
-}
-@mixin header{
-    display: flex;
-    flex-direction: column;
-    .header__logo{
-        display: flex;
-        justify-content: space-between;
-        .header--title{
-                width: 50%;
-                margin: auto;
-        }
-    }
-}
-@mixin images_menus {
-    .lapalette_dugout{
-        @include position;
-        height: 340px;
-        object-fit: cover;
-        object-position: top ;  
-    }
-    .lanote_enchante{
-        @extend .lapalette_dugout;
-        object-fit: cover;
-        object-position: center ;
-    }
-    .a_lafrancaise{
-        @extend .lapalette_dugout;
-    }
-    .delice_des_sens{
-        @extend .lapalette_dugout;
-    }
-}
-
-.main{
-    @include position;
-    @include header;
-    @include images_menus;
-}
-
-// ******************************
-
-// IMAGE DES MENUS
-
-// *******************************
-
-
-
-
-// ************************************
-//                 MENUS
-
-// ************************************
-
-@mixin bg_menu {
-    height: 1200px;
-    border-radius: 50px 50px 0px 0px;
-    background: $fond_gris;
-    position: relative;
-    top: -100px;
-}
-
-
-@mixin animation_coeur{
-    .btn_coeur{
-        color:transparent;
-        background: $coeur;
-       -webkit-background-clip: text;
-                background-clip: text;
-        position: absolute;
-        z-index: 0;
-        top: 70px;
-        font-size: 2rem;
-        right: 43px;
-        cursor: pointer;
-        animation: coeur_complet 3s 0.5s linear infinite;
-    }
-    @keyframes coeur_complet {
-        0%{
-            transform: scale(0);
-        }
-        100%{
-            transform: scale(1);  
-        }
-    }
-    .btn_coeur_white{
-        z-index: 0;
-        background: $fond_gris;
-        position: absolute;
-        cursor: pointer;
-        font-size: 2rem;
-        top: 70px;
-        right: 43px;
-        &:hover{
-            @extend .btn_coeur;    
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu{
-    @include position;
-    @include bg_menu;
-    
-    h1{
-        padding-top: 40px ;
-        padding-left: 20px;
-        font-family: $font-family-title;
-        font-size: 2rem;
-        font-weight: 400;
-        @include animation_coeur;
-    }  
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    h2{
-        border-bottom: 3px solid $tertiaire;
-        width: 60px;
-        text-transform: uppercase;
-        font-weight: 400;
-        color: lighten(black, 30);
-    }
-    article{
-        width: 90%;
-        margin-left: 20px;        
-        .a{
-            background-color: #fff;
-            border-radius: 15px;
-            margin-top: 12px;
-            padding-left: 15px;
-            padding-right: 15px;
-            height: 70px;
-            h3{
-                padding-top: 10px;
-                margin: 0;
-                font-size: 1.1rem;
-            }
-            p {
-                padding-top: 5px;
-                margin:0;
-            }
-        }
-        .flex{
-             display: flex;
-             justify-content: space-between;
-        }
-    }  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ***********************************ANIMATION MENU SLIDE********************************** *******************************************************************
-
-
-
-.a{
-    overflow: hidden;
-    position: relative; 
-}
-.white_round{
-    position: absolute;
-    z-index: -2;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    border-radius: 50%;
-    .icon_check{
-        color: white;
-        font-size: 1.3rem;
-    }
-}
-.gras{
-    padding-right: 20px;
-    font-weight: bold;
-    width: 5%;
-    text-align: center;
-    position: absolute;
-    height: 100%;
-    right: 0px;
-}
-.poitier{
-    color: white;
-    font-weight: bold;
-    padding-right: 0.2%;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 7%;
-    top: 35px;
-    right: 40px;
-    text-align: center;
-
-}
-.a:hover{
-    position: relative;
-    cursor: pointer;
-    .icon_check{
-        -webkit-animation: rotate-center 0.6s ease-in-out both;
-	        animation: rotate-center 0.6s ease-in-out both;
-            color: $tertiaire;
-    }
-    @-webkit-keyframes rotate-center {
-        0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
-      @keyframes rotate-center {
-        0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
-    .poitier{
-        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        -webkit-animation-delay: 0.1s;
-                animation-delay: 0.1s;
-        z-index: 1;
-        background: white;
-        color: black;
-    }
-    .gras{
-        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        z-index: 1;
-        background: white;
-    }
-    .slide-left {
-        position: absolute;
-        right: -100px;
-        border-radius: 0px 15px 15px 0px;
-        width: 100px;
-        height: 100%;
-        background: $tertiaire;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-    @-webkit-keyframes slide-left {
-        0% {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-                  
-        }
-        100% {
-          -webkit-transform: translateX(-100px);
-                  transform: translateX(-100px);
-                  
-        }
-      }
-      @keyframes slide-left {
-        0% {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-                  
-        }
-        100% {
-          -webkit-transform: translateX(-100px);
-                  transform: translateX(-100px);
-                  
-        }
-    }
-}
-
-
-// ***********************************ANIMATION MENU SECTION SLIDE********************************** ********************************************DOWN***********************
-.a {
-	-webkit-animation: a 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: a 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@-webkit-keyframes a {
-    0% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-        opacity: 1;
-    }
-  }
-  @keyframes a {
-    0% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-        opacity: 1;
-    }
-  }
-.a:nth-child(1){
-    animation-delay: 0.1s;
-    opacity: 1;
-}
-.a:nth-child(2){
-    animation-delay: 0.2s;
-    opacity: 1;
-}
-.a:nth-child(3){
-    animation-delay: 0.3s;
-    opacity: 1;
-}
-.a:nth-child(4){
-    animation-delay: 0.4s;
-    opacity: 1;
-}
-.a:nth-child(5){
-    animation-delay: 0.5s;
-    opacity: 1;
-}
-.a:nth-child(6){
-    animation-delay: 0.6s;
-    opacity: 1;
-}
-.a:nth-child(7){
-    animation-delay: 0.7s;
-    opacity: 1;
-}
-.a:nth-child(8){
-    animation-delay: 0.8s;
-    opacity: 1;
-}
-// ****************************BOUTON*****ANIMATION****COEUR*************************************************
-
-// Le btn en forme de coeur doit se remplir progressivement, l'effet peut-être apparaître en survol sur desktop au lieu du clic.....................
-
-
-
-
-
-
-
-
-
-
-
-// *****************************************************
-//                        PAGE ANIMATION
-
-// *****************************************************
-
-//******************************************LOADING************************************
 .loader{
     position: absolute;
     top: 220px;
@@ -716,10 +121,11 @@ footer{
     animation-delay: 1s;
 }
 
+// ****************************LOADING 2 POINTS***************
 
 
-// ***************************************       **LOADING 2 POINTS******************************************************************
-  .lds-ellipsis div {
+// ****************************LOADING 2 POINTS***************
+.lds-ellipsis div {
     position: absolute;
     top: 360px;
     width: 13px;
@@ -768,6 +174,365 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************************
+//                        SOMMAIRE HEADER
+
+// *****************************************************
+.header_acceuil{
+    @include sommaire_header;
+}
+.btn_acceuil{
+    position: relative;
+    z-index: 1;
+    display:block;
+    text-decoration: none;
+    background: linear-gradient(170deg, $secondaire  2%, $primary 100%);
+    height: 30px;
+    width: 200px;
+    color: white;
+    font-size: 0.9em;
+    border-radius: 25px;
+    border: $primary;
+    box-shadow: 0px 2px 8px 0px rgb(184, 183, 183);
+    margin:auto;
+    padding-top: 10px;
+    cursor: pointer;
+    &:hover{ 
+        background: linear-gradient(170deg, $tertiaire 2%, $secondaire  100%);
+        box-shadow: 0px 10px 13px -7px $tertiaire, 0px 0px 3px 0px $primary;
+    }
+}
+
+// ****************************FILTRES**********************
+
+
+// ****************************FILTRES***********************
+
+.filtres{
+    width: 430px;
+    margin: auto;
+    h2{
+        @include h2;
+    }
+
+    .filtre_gray{
+        height: 55px;
+        padding-top: 5px;
+        background-color: $fond_gris;
+        border-radius: 15px;
+        width: 330px;
+        margin-left: 12%;
+        margin-bottom: 15px;
+        box-shadow: 3px 3px 5px rgb(195, 195, 195);
+        position: relative;
+        &::before {
+            content: attr(data-count);
+            position: absolute;
+            background: $primary;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            top: 20px;
+            left: -10px;
+            border-radius: 50%;
+            color: white;
+            font-size: 0.7rem;
+            line-height: 20px;
+
+        }
+        &:hover{
+            @extend .filtre_purple;
+        }
+        p{
+            @include filtre_txt;
+        }
+        .icons{
+            @include icons_margin;
+            color: lighten(black, 40);  
+        }           
+    }
+    
+    .filtre_purple{
+        @extend .filtre_gray;
+        background-color: lighten($primary, 35);
+        p{
+            @include filtre_txt;
+        }
+        i{
+            @include icons_margin;
+            color: $primary;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ****************************SOMMAIRE SECTION****************
+
+
+// ****************************SOMMAIRE SECTION*****************
+
+.restaurants{
+    @include restaurant;
+    h2{
+        @include h2;
+    }
+}
+.acceuil{
+    @include sommaire;
+    @include images_restaurant;
+    .position_txt_green{
+        @include txt_green;
+    }
+    .position_txt_green1{
+        @extend .position_txt_green; 
+        top: 5%;
+    }
+    div{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 15px 15px;
+        margin-top: 0px;
+        h3{
+            @include h3;
+            @include coeur_acceuil;
+        }
+        p{
+            margin-left: 20px;
+            margin-top: 5px;
+            color: lighten(black, 30);
+        }
+    }
+}
+
+// ***********************************************************
+//                          SOMMAIRE FOOTER      
+// ************************************************************
+
+footer{
+    @include footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//   ************************************************************************
+//                        PAGES DES MENUS
+//********************SECTION MAIN LA PALETTE DU GOUT ******************************
+
+.main{
+    @include position;
+    @include header;
+    @include images_menus;
+    footer{
+        @include footer;
+        top: -100px;
+    }
+}
+
+// *********************************************
+//                  MENU LA PALETTE
+// **********************************************
+.la_palette{
+    footer{
+        @include footer;
+        top: -170px;
+    }
+}
+
+// *********************************************
+//                  MENU A LA FRANCAISE
+// **********************************************
+.la_francaise{
+    footer{
+        @include footer;
+        top: -140px;
+    }
+}
+
+// *********************************************
+//                  MENU A LA FRANCAISE
+// **********************************************
+.delice{
+    @extend .la_palette;
+}
+// ****************************************************************
+//                             BOUTON
+// *****************************************************************
+.btn{
+    @extend .btn_acceuil;
+    text-align: center;
+    margin-top: 40px;
+    &:hover{
+        cursor: pointer;
+        background: linear-gradient(170deg, $secondaire  2%, $primary 100%);
+    }
+}
+
+
+
+// ********************************
+// ********BALISE POINTIER***
+// ********************************
+.pointier{
+    color: white;
+    font-weight: bold;
+    padding-right: 0.2%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 8%;
+    top: 35px;
+    right: 40px;
+    text-align: center;
+
+}
+// ********************************
+// ******BALISE PRIX SLIDE LEFT******
+// ********************************
+.gras{
+    padding-right: 20px;
+    font-weight: bold;
+    width: 5%;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+// ********************************
+// ********BALISE WHITE ROUND***
+// ********************************
+.white_round{
+    position: absolute;
+    z-index: -2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    .icon_check{
+        color: white;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+// *********************************************
+//                  ENTREES-PLATS-DESSERTS
+// **********************************************
+.menu{
+    @include position;
+    @include bg_menu;
+    @include animation_slide_down;
+    
+    h1{
+        @include titre_principale;
+        @include animation_coeur;
+    }  
+
+    h2{
+        @include titre_secondaire;
+    }
+}
+
+
+
+// ********************************
+// ********SECTION ARTICLE ***
+// ********************************
+article{
+    width: 90%;
+    margin-left: 20px;  
+    h3{
+        @include titre_tertiaire;
+    }      
+} 
+p {
+    padding-top: 5px;
+    margin:0;
+}
+.flex{
+     display: flex;
+     justify-content: space-between;
+} 
+
+
+
+
+// *********************************************
+//          ANIMATION SLIDE
+// **********************************************
+.a{
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 70px;
+    overflow: hidden;
+    position: relative; 
+    &:hover{
+        position: relative;
+        cursor: pointer;
+        
+        .icon_check{
+            @include animation_icon_check;
+          }
+    
+        .pointier{
+            @include pointier_left;
+        }
+        .gras{
+            @include prix_left;
+        }
+        .slide-left{
+            @include bordure_gauche;
+        }
+        
+    }
+}
 
 
 
