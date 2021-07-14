@@ -608,83 +608,87 @@ p {
         
 //      }
 // }
-// ****************************SECTION RESPONSIVE******************************************************
-// @media  screen and (min-width: 600px) {
-//     .conteneur{
-//          .header_acceuil{
-//              width: 100%;
-//              h1{
-//                  width: 100%;
-//             }
-//             .btn_acceuil{
-//                 margin-top: 50px;
-//             }
 
-//         }
-//         .filtres{
-//             width: 90%;
-//             margin-bottom: 20px;
-//             h2{
-//                 margin-top: 0;
-//                 margin-left: 0;
-//                 margin-top: 20px;
-//             }
-//             .flex_space{
-//                 display: flex;
-//                 justify-content: space-around;
-//                 flex-wrap: wrap;
-//             }
-//         } 
-//         .menu{
-//             display: flex;
-//             flex-direction: column;
-//             height: auto;
-//             width: auto;
-//             .menu_acceuil{
-//                 margin: 15px;
-//                 img{
-//                     width: 100%;
-//                     height: 300px;
-//                     object-fit: cover;
-//                     object-position: center 60%;
-//                 }
-//                 h3{
-//                     width: auto;
-//                 }
-//                 p{
-//                     text-align: center;
-//                 }
-//             }
-//             h2{
-//                 margin-top: 0;
-//                 padding-top:0 ;
-//             }
-//             .flex_around{
-//                 display: flex;
-//                 justify-content: space-around;
-//                 margin: auto;
-//             }
-//         }
-//         footer{
-//             width: auto;
-//             top: -15px;
-//             .logo_white{
-//                 text-align: center;
-//                 width: auto;
-//                 font-size: 2rem;
-//             }
-//             ul{
-//                 width: 80%;
-//                 margin: auto;
-//                 margin-top: 30px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 flex-wrap: wrap;
-//                 font-size: 1.3rem;
-//             }
-//         } 
-//     } 
-// }
+
+
+
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px) {
+    .conteneur{
+         .header_acceuil{
+             width: 100%;
+             h1{
+                 width: 100%;
+            }
+            .btn_acceuil{
+                margin-top: 50px;
+            }
+
+        }
+        .filtres{
+            width: 90%;
+            margin-bottom: 20px;
+            h2{
+                margin-top: 0;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .flex_space{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+        } 
+        .restaurants{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            .acceuil{
+                margin: 15px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: center 60%;
+                }
+                h3{
+                    width: auto;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            h2{
+                margin-top: 0;
+                padding-top:0 ;
+            }
+            .flex_around{
+                display: flex;
+                justify-content: space-around;
+                margin: auto;
+            }
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    } 
+}
 
 
 
