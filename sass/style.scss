@@ -8,10 +8,9 @@
 
 
 
-// *****************************************************
-//                        SOMMAIRE MENUS
-
-// *****************************************************
+                                    // *****************************************************
+                                    //                        SOMMAIRE MENUS
+                                    // *****************************************************
 body{
     font-family: $font-family-body;
     a{
@@ -22,11 +21,11 @@ body{
     }
 }
 
-// *****************************************************
+                                                // *****************************************************
 
-//               ANIMATION LOADER DANS LE CONTENEUR
+                                                //               ANIMATION LOADER DANS LE CONTENEUR
 
-// *****************************************************
+                                                // *****************************************************
 .conteneur{
     margin: auto;
     opacity: 1;
@@ -39,7 +38,7 @@ body{
         
     }
     90%{
-        opacity: 0.3;
+        opacity: 0.8;
         background: $fond_gris;
     }
     100%{
@@ -48,14 +47,14 @@ body{
 }
 
 
-//*****************************ANIMATION RECHARGER************************************
+                    //*****************************ANIMATION RECHARGER************************************
 
 
-//*****************************ANIMATION RECHARGER************************************
+                    //*****************************ANIMATION RECHARGER************************************
 
 .loader{
     position: absolute;
-    top: 220px;
+    top: 600px;
     width: 100%;
     margin: auto;
     z-index: 1;
@@ -121,13 +120,13 @@ body{
     animation-delay: 1s;
 }
 
-// ****************************LOADING 2 POINTS***************
+                            // ****************************LOADING 2 POINTS***************
 
 
-// ****************************LOADING 2 POINTS***************
+                            // ****************************LOADING 2 POINTS***************
 .lds-ellipsis div {
     position: absolute;
-    top: 360px;
+    top: 800px;
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -185,10 +184,10 @@ body{
 
 
 
-// *****************************************************
-//                        SOMMAIRE HEADER
+                            // *****************************************************
+                            //                        SOMMAIRE HEADER
 
-// *****************************************************
+                            // *****************************************************
 .header_acceuil{
     @include sommaire_header;
 }
@@ -214,10 +213,10 @@ body{
     }
 }
 
-// ****************************FILTRES**********************
+                            // ****************************FILTRES**********************
 
 
-// ****************************FILTRES***********************
+                            // ****************************FILTRES***********************
 
 .filtres{
     width: 430px;
@@ -256,6 +255,8 @@ body{
         }
         &:hover{
             @extend .filtre_purple;
+            
+           
         }
         p{
             @include filtre_txt;
@@ -267,8 +268,8 @@ body{
     }
     
     .filtre_purple{
-        margin-bottom: 80px;
         @extend .filtre_gray;
+        // margin-bottom: 80px;
         background-color: lighten($primary, 35);
         p{
             @include filtre_txt;
@@ -285,20 +286,13 @@ body{
 
 
 
+                                // ****************************SOMMAIRE SECTION****************
 
 
-
-
-
-
-
-
-
-
-// ****************************SOMMAIRE SECTION****************
-
-
-// ****************************SOMMAIRE SECTION*****************
+                                // ****************************SOMMAIRE SECTION*****************
+.flex_space{
+    margin-bottom: 80px;
+}
 
 .restaurants{
     @include restaurant;
@@ -314,7 +308,7 @@ body{
     }
     .position_txt_green1{
         @extend .position_txt_green; 
-        top: 5%;
+        top: 7%;
     }
     div{
         background-color: #fff;
@@ -336,18 +330,18 @@ body{
     }
 }
 
-// ***********************************************************
-//                          SOMMAIRE FOOTER      
-// ************************************************************
+                            // ***********************************************************
+                            //                          SOMMAIRE FOOTER      
+                            // ************************************************************
 
 footer{
     @include footer;
 }
 
 
-//   ************************************************************************
-//                        PAGES DES MENUS
-//********************SECTION MAIN LA PALETTE DU GOUT ******************************
+                        //   ************************************************************************
+                        //                        PAGES DES MENUS
+                        //********************SECTION MAIN LA PALETTE DU GOUT ******************************
 
 .main{
     @include position;
@@ -359,9 +353,9 @@ footer{
     }
 }
 
-// *********************************************
-//                  MENU LA PALETTE
-// **********************************************
+                                // *********************************************
+                                //                  MENU LA PALETTE
+                                // **********************************************
 .la_palette{
     footer{
         @include footer;
@@ -369,9 +363,9 @@ footer{
     }
 }
 
-// *********************************************
-//                  MENU A LA FRANCAISE
-// **********************************************
+                                        // *********************************************
+                                        //                  MENU A LA FRANCAISE
+                                        // **********************************************
 .la_francaise{
     footer{
         @include footer;
@@ -379,15 +373,15 @@ footer{
     }
 }
 
-// *********************************************
-//                  MENU A LA FRANCAISE
-// **********************************************
+                                                    // *********************************************
+                                                    //                  MENU A LA FRANCAISE
+                                                    // **********************************************
 .delice{
     @extend .la_palette;
 }
-// ****************************************************************
-//                             BOUTON
-// *****************************************************************
+                            // ****************************************************************
+                            //                             BOUTON
+                            // *****************************************************************
 .btn{
     @extend .btn_acceuil;
     text-align: center;
@@ -400,9 +394,9 @@ footer{
 
 
 
-// ********************************
-// ********BALISE POINTIER***
-// ********************************
+                                            // ********************************
+                                            // ********BALISE POINTIER***
+                                            // ********************************
 .pointier{
     color: white;
     font-weight: bold;
@@ -410,15 +404,15 @@ footer{
     position: absolute;
     z-index: -1;
     height: 100%;
-    width: 8%;
-    top: 35px;
+    width: 7.5%;
+    top: 45px;
     right: 40px;
     text-align: center;
 
 }
-// ********************************
-// ******BALISE PRIX SLIDE LEFT******
-// ********************************
+                                        // ********************************
+                                        // ******BALISE PRIX SLIDE LEFT******
+                                        // ********************************
 .gras{
     padding-right: 20px;
     font-weight: bold;
@@ -428,9 +422,9 @@ footer{
     height: 100%;
     right: 0px;
 }
-// ********************************
-// ********BALISE WHITE ROUND***
-// ********************************
+                                        // ********************************
+                                        // ********BALISE WHITE ROUND***
+                                        // ********************************
 .white_round{
     position: absolute;
     z-index: -2;
@@ -455,9 +449,9 @@ footer{
 
 
 
-// *********************************************
-//                  ENTREES-PLATS-DESSERTS
-// **********************************************
+                                // *********************************************
+                                //                  ENTREES-PLATS-DESSERTS
+                                // **********************************************
 .menu{
     @include position;
     @include bg_menu;
@@ -475,9 +469,9 @@ footer{
 
 
 
-// ********************************
-// ********SECTION ARTICLE ***
-// ********************************
+                                            // ********************************
+                                            // ********SECTION ARTICLE ***
+                                            // ********************************
 article{
     width: 90%;
     margin-left: 20px;  
@@ -493,9 +487,9 @@ article{
 
 
 
-// *********************************************
-//          ANIMATION SLIDE
-// **********************************************
+                            // *********************************************
+                            //          ANIMATION SLIDE
+                            // **********************************************
 .a{
     background-color: #fff;
     border-radius: 15px;
@@ -539,11 +533,10 @@ article{
 
 
 
-//   *****************************************************
-  //                        RESPONSIVE
-  
-  // *****************************************************
-// ****************************SECTION RESPONSIVE******************************************************
+                            // *****************************************************
+                            //                        RESPONSIVE
+                            // *****************************************************
+
 @media  screen and (min-width: 600px){
     .main{
         width: auto;
@@ -620,30 +613,6 @@ article{
         } 
     }
 }
-        // footer {
-        //     height: auto;
-        //     width: 100%;
-        //     position: relative;
-        //     top: auto;
-    
-        //     .logo_white{
-        //         text-align: center;
-        //         width: auto;
-        //         font-size: 2rem;
-    
-        //         ul{
-        //             width: 80%;
-        //             margin: auto;
-        //             margin-top: 30px;
-        //             display: flex;
-        //             justify-content: space-between;
-        //             flex-wrap: wrap;
-        //             font-size: 1.3rem;
-        //         }
-        //     }
-        // } 
-
-
 
 
 
@@ -667,27 +636,29 @@ article{
             .btn_acceuil{
                 margin-top: 50px;
             }
-
         }
         .filtres{
             width: 90%;
             margin-bottom: 20px;
-            // h2{
-            //     margin-top: 0;
-            //     margin-left: 0;
-            //     margin-top: 20px;
-            // }
+
             .flex_space{
                 display: flex;
                 justify-content: space-around;
                 flex-wrap: wrap;
             }
         } 
+
+
         .restaurants{
             display: flex;
             flex-direction: column;
             height: auto;
             width: auto;
+            h2{
+                padding-top: 10px;
+                text-align: center;
+            }
+
             .acceuil{
                 margin: 20px;
                 img{
@@ -703,16 +674,14 @@ article{
                     text-align: center;
                 }
             }
-            h2{
-                margin-top: 0;
-                padding-top:0 ;
-            }
+
             .flex_around{
                 display: flex;
                 justify-content: space-around;
                 margin: auto;
             }
         }
+
         footer{
             width: auto;
             top: -15px;
@@ -735,323 +704,3 @@ article{
 }
 
 
-
-//**********************************SECTION MENU A LA FRANCAISE**********************************************************
-// .main{
-//     margin: auto;
-//     width: 430px;
-//     .img_a_lafrancaise{
-//         margin: auto;
-//         width: 100%;
-//         height: 310px;
-//         object-fit: cover;
-//         object-position: bottom ;
-//     }
-// }
-//*******************************SECTION MENU LA NOTE ENCHANTEE **********************************************************
-// .main{
-//         margin: auto;
-//         width: 430px;
-//         .img_lanote_enchante{
-//         margin: auto;
-//         width: 100%;
-//         height: 300px;
-//         object-fit: cover;
-//         object-position: center ;
-//         }
-//         .section_menu{
-//             @extend .section_menu;
-//             top: -85px;
-//             height: 1330px;
-//         }
-//         .btn_coeur{
-//             color:transparent;
-//             background: $coeur;
-//            -webkit-background-clip: text;
-//                     background-clip: text;
-//             position: absolute;
-//             z-index: 0;
-//             top: 45px;
-//             font-size: 2rem;
-//             right: 10%;
-            
-//          }
-// }
-//********************************SECTION MENU DELICE DES SENS **********************************************************
-// .main{
-//     margin: auto;
-//     width: 430px;
-//     .img_delice{
-//         margin: auto;
-//         width: 100%;
-//         height: 300px;
-//         object-fit: cover;
-//         object-position: bottom ;
-//     }
-//     .section_menu{
-//         @extend .section_menu;
-//         top: -90px;
-//     }
-//     .btn_coeur{
-//         color:transparent;
-//         background: $coeur;
-//        -webkit-background-clip: text;
-//                 background-clip: text;
-//         position: absolute;
-//         z-index: 0;
-//         top: 45px;
-//         font-size: 2rem;
-//         right: 10%;
-        
-//      }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ****************************SECTION RESPONSIVE******************************************************
-// @media  screen and (min-width: 600px){
-//     .menu_la_française{
-//         width: auto;
-//         img{
-//             width: 30%;
-//         }
-//         .img_a_lafrancaise{
-//             width: 100%;
-//             object-fit: cover;
-//             object-position: center 70%;
-//             height: 500px;
-//             margin-top: 20px;
-//         }
-//         .section_menu{
-//             width: auto;
-//             height: auto;
-//             position: static;
-//             border-radius: 0%;
-//             position: relative;
-//             .btn_coeur{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             .btn_coeur_white{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             h1{
-//                 text-align: center;
-//                 font-size: 2.5rem;
-//             }
-//             article{
-//                 width: 80%;
-//                 margin: auto;
-//                 font-size: 1.3rem;
-//                 .a{
-//                     height: 90px;
-//                     h3{
-//                         font-size: 1.5rem;
-//                     }
-//                 }
-//             }
-    
-//         }
-//         .btn{
-//             font-size: 1.5rem;
-//             height: auto;
-//             width: 250px;
-//             padding-bottom: 10px;
-//         }
-//         footer{
-//             width: auto;
-//             top: -15px;
-//             .logo_white{
-//                 text-align: center;
-//                 width: auto;
-//                 font-size: 2rem;
-//             }
-//             ul{
-//                 width: 80%;
-//                 margin: auto;
-//                 margin-top: 30px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 flex-wrap: wrap;
-//                 font-size: 1.3rem;
-//             }
-//         } 
-//     }  
-// }
-// ****************************SECTION RESPONSIVE******************************************************
-// @media  screen and (min-width: 600px){
-//     .menu_lanote_enchante{
-//         width: auto;
-//         img{
-//             width: 30%;
-//         }
-//         .img_lanote_enchante{
-//             width: 100%;
-//             object-fit: cover;
-//             object-position: center 55%;
-//             height: 500px;
-//             margin-top: 20px;
-//         }
-//         .section_menu{
-//             width: auto;
-//             height: auto;
-//             position: static;
-//             border-radius: 0%;
-//             position: relative;
-//             .btn_coeur{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             .btn_coeur_white{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             h1{
-//                 text-align: center;
-//                 font-size: 2.5rem;
-//             }
-//             article{
-//                 width: 80%;
-//                 margin: auto;
-//                 font-size: 1.3rem;
-//                 .a{
-//                     height: 90px;
-//                     h3{
-//                         font-size: 1.5rem;
-//                     }
-//                 }
-//             }
-    
-//         }
-//         .btn{
-//             font-size: 1.5rem;
-//             height: auto;
-//             width: 250px;
-//             padding-bottom: 10px;
-//         }
-//         footer{
-//             width: auto;
-//             top: -15px;
-//             .logo_white{
-//                 text-align: center;
-//                 width: auto;
-//                 font-size: 2rem;
-//             }
-//             ul{
-//                 width: 80%;
-//                 margin: auto;
-//                 margin-top: 30px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 flex-wrap: wrap;
-//                 font-size: 1.3rem;
-//             }
-//         } 
-//     }  
-// }
-// ****************************SECTION RESPONSIVE******************************************************
-// @media  screen and (min-width: 600px){
-//     .menu_delice_des_sens{
-//         width: auto;
-//         img{
-//             width: 30%;
-//         }
-//         .img_delice{
-//             width: 100%;
-//             object-fit: cover;
-//             object-position: center 70%;
-//             height: 500px;
-//             margin-top: 20px;
-//         }
-//         .section_menu{
-//             width: auto;
-//             height: auto;
-//             position: static;
-//             border-radius: 0%;
-//             position: relative;
-//             .btn_coeur{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             .btn_coeur_white{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             h1{
-//                 text-align: center;
-//                 font-size: 2.5rem;
-//             }
-//             article{
-//                 width: 80%;
-//                 margin: auto;
-//                 font-size: 1.3rem;
-//                 .a{
-//                     height: 90px;
-//                     h3{
-//                         font-size: 1.5rem;
-//                     }
-//                 }
-//             }
-    
-//         }
-//         .btn{
-//             font-size: 1.5rem;
-//             height: auto;
-//             width: 250px;
-//             padding-bottom: 10px;
-//         }
-//         footer{
-//             width: auto;
-//             top: -15px;
-//             .logo_white{
-//                 text-align: center;
-//                 width: auto;
-//                 font-size: 2rem;
-//             }
-//             ul{
-//                 width: 80%;
-//                 margin: auto;
-//                 margin-top: 30px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 flex-wrap: wrap;
-//                 font-size: 1.3rem;
-//             }
-//         } 
-//     }  
-// }
