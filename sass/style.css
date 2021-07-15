@@ -1166,13 +1166,13 @@ article h3 {
   .main .menu h1 .btn_coeur, .main .menu h1 .btn_coeur_white:hover {
     text-align: center;
     left: 50%;
-    top: 30px;
+    top: 100px;
     width: 33px;
   }
   .main .menu h1 .btn_coeur_white {
     text-align: center;
     left: 50%;
-    top: 30px;
+    top: 100px;
     width: 33px;
   }
   .main .animation_menu {
@@ -1182,6 +1182,9 @@ article h3 {
   }
   .main .animation_menu .a {
     height: 90px;
+  }
+  .main .animation_menu .a .pointier {
+    display: none;
   }
   .main .animation_menu .a h3 {
     font-size: 1.5rem;

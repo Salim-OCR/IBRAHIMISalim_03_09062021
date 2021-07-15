@@ -560,13 +560,13 @@ article{
                 .btn_coeur{
                     text-align: center;
                     left: 50%;
-                    top: 30px;
+                    top: 100px;
                     width: 33px;
                 }
                 .btn_coeur_white{
                     text-align: center;
                     left: 50%;
-                    top: 30px;
+                    top: 100px;
                     width: 33px;
                 }
             } 
@@ -578,6 +578,9 @@ article{
             font-size: 1.3rem;
             .a{
                 height: 90px;
+                .pointier{
+                    display: none;
+                }
                 h3{
                     font-size: 1.5rem;
                 }
