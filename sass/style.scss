@@ -227,8 +227,11 @@ body{
     }
 
     .filtre_gray{
+        display: flex;
+        // justify-content: center;
+        align-items: center;
         height: 55px;
-        padding-top: 5px;
+        // padding-top: 15px;
         background-color: $fond_gris;
         border-radius: 15px;
         width: 330px;
@@ -264,6 +267,7 @@ body{
     }
     
     .filtre_purple{
+        margin-bottom: 80px;
         @extend .filtre_gray;
         background-color: lighten($primary, 35);
         p{
@@ -323,8 +327,10 @@ body{
             @include coeur_acceuil;
         }
         p{
-            margin-left: 20px;
-            margin-top: 5px;
+            margin: 0;
+            margin-left: 18px;
+            margin-bottom: 10px;
+            padding-top: 2px;
             color: lighten(black, 30);
         }
     }
@@ -337,16 +343,6 @@ body{
 footer{
     @include footer;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 //   ************************************************************************
@@ -489,10 +485,6 @@ article{
         @include titre_tertiaire;
     }      
 } 
-p {
-    padding-top: 5px;
-    margin:0;
-}
 .flex{
      display: flex;
      justify-content: space-between;
@@ -536,6 +528,211 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//   *****************************************************
+  //                        RESPONSIVE
+  
+  // *****************************************************
+// ****************************SECTION RESPONSIVE******************************************************
+@media  screen and (min-width: 600px){
+    .main{
+        width: auto;
+
+        .header--title{
+            width: 30%;
+        }
+
+        .lapalette_dugout{
+            @include img_responsive_lapalette;
+        }
+        
+        .menu{
+            width: 100%;
+            height: 1500px;
+            border-radius: 0%;
+            position: relative;
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+                .btn_coeur{
+                    text-align: center;
+                    left: 50%;
+                    top: 30px;
+                    width: 33px;
+                }
+                .btn_coeur_white{
+                    text-align: center;
+                    left: 50%;
+                    top: 30px;
+                    width: 33px;
+                }
+            } 
+        } 
+    
+        .animation_menu{
+            width: 80%;
+            margin: auto;
+            font-size: 1.3rem;
+            .a{
+                height: 90px;
+                h3{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    
+        .btn{
+            font-size: 1.5rem;
+            height: auto;
+            width: 250px;
+            padding-bottom: 20px;
+        }
+
+        footer{
+            width: 100%;
+            height: 250px;
+            top: -100px;
+
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    }
+}
+        // footer {
+        //     height: auto;
+        //     width: 100%;
+        //     position: relative;
+        //     top: auto;
+    
+        //     .logo_white{
+        //         text-align: center;
+        //         width: auto;
+        //         font-size: 2rem;
+    
+        //         ul{
+        //             width: 80%;
+        //             margin: auto;
+        //             margin-top: 30px;
+        //             display: flex;
+        //             justify-content: space-between;
+        //             flex-wrap: wrap;
+        //             font-size: 1.3rem;
+        //         }
+        //     }
+        // } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **************************** RESPONSIVE ACCEUIL DES MENUS DES RESTAURANT ******************************************************
+@media  screen and (min-width: 600px) {
+    .conteneur{
+         .header_acceuil{
+             width: 100%;
+             h1{
+                 width: 100%;
+            }
+            .btn_acceuil{
+                margin-top: 50px;
+            }
+
+        }
+        .filtres{
+            width: 90%;
+            margin-bottom: 20px;
+            // h2{
+            //     margin-top: 0;
+            //     margin-left: 0;
+            //     margin-top: 20px;
+            // }
+            .flex_space{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+        } 
+        .restaurants{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            .acceuil{
+                margin: 20px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: center 60%;
+                }
+                h3{
+                    width: auto;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            h2{
+                margin-top: 0;
+                padding-top:0 ;
+            }
+            .flex_around{
+                display: flex;
+                justify-content: space-around;
+                margin: auto;
+            }
+        }
+        footer{
+            width: auto;
+            top: -15px;
+            .logo_white{
+                text-align: center;
+                width: auto;
+                font-size: 2rem;
+            }
+            ul{
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 1.3rem;
+            }
+        } 
+    } 
+}
 
 
 
@@ -612,169 +809,27 @@ p {
 
 
 
-// ****************************SECTION RESPONSIVE******************************************************
-@media  screen and (min-width: 600px) {
-    .conteneur{
-         .header_acceuil{
-             width: 100%;
-             h1{
-                 width: 100%;
-            }
-            .btn_acceuil{
-                margin-top: 50px;
-            }
-
-        }
-        .filtres{
-            width: 90%;
-            margin-bottom: 20px;
-            h2{
-                margin-top: 0;
-                margin-left: 0;
-                margin-top: 20px;
-            }
-            .flex_space{
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
-        } 
-        .restaurants{
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            width: auto;
-            .acceuil{
-                margin: 15px;
-                img{
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    object-position: center 60%;
-                }
-                h3{
-                    width: auto;
-                }
-                p{
-                    text-align: center;
-                }
-            }
-            h2{
-                margin-top: 0;
-                padding-top:0 ;
-            }
-            .flex_around{
-                display: flex;
-                justify-content: space-around;
-                margin: auto;
-            }
-        }
-        footer{
-            width: auto;
-            top: -15px;
-            .logo_white{
-                text-align: center;
-                width: auto;
-                font-size: 2rem;
-            }
-            ul{
-                width: 80%;
-                margin: auto;
-                margin-top: 30px;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                font-size: 1.3rem;
-            }
-        } 
-    } 
-}
 
 
 
-//   *****************************************************
-  //                        RESPONSIVE
-  
-  // *****************************************************
-// ****************************SECTION RESPONSIVE******************************************************
-// @media  screen and (min-width: 600px){
-//     .lapalette_dugout{
-//         width: auto;
-//         img{
-//             width: 30%;
-//         }
-//         .img_lapalette_dugout{
-//             width: 100%;
-//             object-fit: cover;
-//             object-position: center 55%;
-//             height: 500px;
-//             margin-top: 20px;
-//         }
-//         .section_menu{
-//             width: auto;
-//             height: auto;
-//             position: static;
-//             border-radius: 0%;
-//             position: relative;
-//             .btn_coeur{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             .btn_coeur_white{
-//                 text-align: center;
-//                 left: 50%;
-//                 top: 130px;
-//                 width: 33px;
-//             }
-//             h1{
-//                 text-align: center;
-//                 font-size: 2.5rem;
-//             }
-//             article{
-//                 width: 80%;
-//                 margin: auto;
-//                 font-size: 1.3rem;
-//                 .a{
-//                     height: 90px;
-//                     h3{
-//                         font-size: 1.5rem;
-//                     }
-//                 }
-//             }
-    
-//         }
-//         .btn{
-//             font-size: 1.5rem;
-//             height: auto;
-//             width: 250px;
-//             padding-bottom: 10px;
-//         }
-//         @mixin responsive_footer {
-//             width: auto;
-//             top: -15px;
-//             .logo_white{
-//                 text-align: center;
-//                 width: auto;
-//                 font-size: 2rem;
-            
-//         }
-//         footer{
-//             @include responsive_footer;
-//             }
-//             ul{
-//                 width: 80%;
-//                 margin: auto;
-//                 margin-top: 30px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 flex-wrap: wrap;
-//                 font-size: 1.3rem;
-//             }
-//         } 
-//     }  
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ****************************SECTION RESPONSIVE******************************************************
 // @media  screen and (min-width: 600px){
 //     .menu_la_française{
