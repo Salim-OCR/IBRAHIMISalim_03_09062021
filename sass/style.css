@@ -95,18 +95,18 @@ body a {
 
 @-webkit-keyframes flash {
   0% {
-    background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     opacity: 1;
   }
   90% {
-    background: #99E2D0;
+    color: #99E2D0;
     text-shadow: none;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
   100% {
-    background: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
+    color: linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     text-shadow: 0 0 7px linear-gradient(220deg, #9356DC 0%, #FF79DA 100%);
     opacity: 1;
   }
@@ -1282,7 +1282,6 @@ article h3 {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin: auto;
   }
   .conteneur footer {
     width: auto;
