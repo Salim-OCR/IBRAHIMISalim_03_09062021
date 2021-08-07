@@ -220,7 +220,6 @@ body{
                             // ****************************FILTRES***********************
 
 .filtres{
-    width: 430px;
     margin: auto;
     h2{
         @include h2;
@@ -542,6 +541,7 @@ article{
 @media  screen and (min-width: 600px){
     .main{
         width: auto;
+        
 
         .header--title{
             width: 30%;

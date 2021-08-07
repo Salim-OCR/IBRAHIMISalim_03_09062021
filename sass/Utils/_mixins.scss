@@ -11,7 +11,6 @@
 @mixin sommaire_header {
     text-align: center;
     background-color: $fond_gris;
-    width: 430px;
     margin: auto;
     height: 350px;
     .logo_header{
@@ -73,7 +72,6 @@
 
 @mixin restaurant {
     background-color: $fond_gris;
-    width: 430px;
     height: 1300px;
     margin: auto;
 }
@@ -199,7 +197,7 @@
     background-color: lighten(black, 20);
     color: white;
     margin: auto;
-    width: 430px;
+    width: 400px;
     height: 170px;
     position: relative;
     top: -60px;
@@ -255,7 +253,6 @@
 
 @mixin position{
     margin: auto;
-    width: 430px;
 }
 
 @mixin header{
@@ -282,6 +279,7 @@
     .lapalette_dugout{
         @include position;
         height: 300px;
+        width: 400px;
         object-fit: cover;
         object-position: top ;  
     }
