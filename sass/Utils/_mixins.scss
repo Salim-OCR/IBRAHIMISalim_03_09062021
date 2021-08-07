@@ -37,7 +37,6 @@
         }
     } 
     h1{
-        width: 350px;
         margin: auto;
         margin-top: 30px;
     }
@@ -196,8 +195,8 @@
 @mixin footer {
     background-color: lighten(black, 20);
     color: white;
+    width: 100%;
     margin: auto;
-    width: 400px;
     height: 170px;
     position: relative;
     top: -60px;
@@ -252,6 +251,7 @@
                                 // **********************************************
 
 @mixin position{
+    width: 100%;
     margin: auto;
 }
 
@@ -279,7 +279,7 @@
     .lapalette_dugout{
         @include position;
         height: 300px;
-        width: 400px;
+        width: 100%;
         object-fit: cover;
         object-position: top ;  
     }

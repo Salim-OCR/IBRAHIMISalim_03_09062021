@@ -55,7 +55,7 @@ body{
 .loader{
     position: absolute;
     top: 600px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     z-index: 1;
     display: flex;
@@ -233,7 +233,6 @@ body{
         // padding-top: 15px;
         background-color: $fond_gris;
         border-radius: 15px;
-        width: 330px;
         margin-left: 12%;
         margin-bottom: 15px;
         box-shadow: 3px 3px 5px rgb(195, 195, 195);
@@ -532,10 +531,9 @@ article{
 
 
 
-
-                            // *****************************************************
+                            // ****************************************************
                             //                        RESPONSIVE
-                            // *****************************************************
+                            // **************************************************
 
 
 @media  screen and (min-width: 600px){
@@ -615,16 +613,6 @@ article{
         } 
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 // **************************** RESPONSIVE ACCEUIL DES MENUS DES RESTAURANT ******************************************************
