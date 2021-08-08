@@ -76,7 +76,7 @@
 }
 
 @mixin h2{
-    padding-top: 70px;
+    padding-top: 20px;
     margin-left: 50px;
 }
 
@@ -324,8 +324,8 @@
         position: absolute;
         z-index: 0;
         top: 30px;
-        font-size: 2rem;
-        right: 43px;
+        font-size: 1.7rem;
+        right: 20px;
         cursor: pointer;
         animation: coeur_complet 3s 0.5s linear infinite;
     }
@@ -342,9 +342,9 @@
         background: $fond_gris;
         position: absolute;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 1.7rem;
         top: 30px;
-        right: 43px;
+        right: 20px;
         &:hover{
             @extend .btn_coeur;    
         }
@@ -359,7 +359,7 @@
     padding-top: 0px ;
     padding-left: 20px;
     font-family: $font-family-title;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 400;
 }
 

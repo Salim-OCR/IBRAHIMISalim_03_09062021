@@ -335,7 +335,7 @@ body a {
 }
 
 .filtres h2 {
-  padding-top: 70px;
+  padding-top: 20px;
   margin-left: 50px;
 }
 
@@ -399,6 +399,7 @@ body a {
 
 .flex_space {
   margin-bottom: 80px;
+  width: 340px;
 }
 
 .restaurants {
@@ -408,7 +409,7 @@ body a {
 }
 
 .restaurants h2 {
-  padding-top: 70px;
+  padding-top: 20px;
   margin-left: 50px;
 }
 
@@ -852,9 +853,9 @@ footer ul .mail {
   position: absolute;
   z-index: -1;
   height: 100%;
-  width: 7.5%;
+  width: 50px;
   top: 45px;
-  right: 40px;
+  right: 32px;
   text-align: center;
 }
 
@@ -984,7 +985,7 @@ footer ul .mail {
   padding-top: 0px;
   padding-left: 20px;
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 400;
 }
 
@@ -996,8 +997,8 @@ footer ul .mail {
   position: absolute;
   z-index: 0;
   top: 30px;
-  font-size: 2rem;
-  right: 43px;
+  font-size: 1.7rem;
+  right: 20px;
   cursor: pointer;
   -webkit-animation: coeur_complet 3s 0.5s linear infinite;
           animation: coeur_complet 3s 0.5s linear infinite;
@@ -1019,9 +1020,9 @@ footer ul .mail {
   background: #f3f3f3;
   position: absolute;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.7rem;
   top: 30px;
-  right: 43px;
+  right: 20px;
 }
 
 .menu h2 {
@@ -1133,9 +1134,18 @@ article h3 {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 375px) and (max-width: 720px) {
+  .pointier {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 720px) {
   .main {
     width: auto;
+  }
+  .main .pointier {
+    display: none;
   }
   .main .header--title {
     width: 30%;
@@ -1157,7 +1167,7 @@ article h3 {
   }
   .main .menu h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .main .menu h1 .btn_coeur, .main .menu h1 .btn_coeur_white:hover {
     text-align: center;
@@ -1225,17 +1235,8 @@ article h3 {
     margin-top: 50px;
   }
   .conteneur .filtres {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-  .conteneur .filtres .flex_space {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    width: 300px;
+    margin-bottom: 2px;
   }
   .conteneur .restaurants {
     display: -webkit-box;

@@ -291,6 +291,7 @@ body{
                                 // ****************************SOMMAIRE SECTION*****************
 .flex_space{
     margin-bottom: 80px;
+    width: 340px;
 }
 
 .restaurants{
@@ -403,9 +404,9 @@ footer{
     position: absolute;
     z-index: -1;
     height: 100%;
-    width: 7.5%;
+    width: 50px;
     top: 45px;
-    right: 40px;
+    right: 32px;
     text-align: center;
 
 }
@@ -535,11 +536,20 @@ article{
                             //                        RESPONSIVE
                             // **************************************************
 
+@media (min-width: 375px) and (max-width: 720px) {
+    .pointier{
+        display: inline-block;
+    }
+}
 
-@media  screen and (min-width: 600px){
+
+
+@media  screen and (min-width: 720px){
     .main{
         width: auto;
-        
+        .pointier{
+            display: none;
+        }
 
         .header--title{
             width: 30%;
@@ -556,7 +566,7 @@ article{
             position: relative;
             h1{
                 text-align: center;
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 .btn_coeur{
                     text-align: center;
                     left: 50%;
@@ -628,14 +638,8 @@ article{
             }
         }
         .filtres{
-            width: 90%;
-            margin-bottom: 20px;
-
-            .flex_space{
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
+            width: 300px;
+            margin-bottom: 2px;
         } 
 
 
