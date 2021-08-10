@@ -846,7 +846,7 @@ footer ul .mail {
   background: linear-gradient(170deg, #FF79DA 2%, #9356DC 100%);
 }
 
-.pointier {
+.pointier, .pointier_du_haut {
   color: white;
   font-weight: bold;
   padding-right: 0.2%;
@@ -857,6 +857,13 @@ footer ul .mail {
   top: 45px;
   right: 32px;
   text-align: center;
+  border: 0.5px solid white;
+}
+
+.pointier_du_haut {
+  top: 10px;
+  height: 22px;
+  right: 0px;
 }
 
 .gras {
@@ -1075,7 +1082,7 @@ article h3 {
   color: #99E2D0;
 }
 
-.a:hover .pointier {
+.a:hover .pointier, .a:hover .pointier_du_haut {
   -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   -webkit-animation-delay: 0.1s;
@@ -1083,6 +1090,59 @@ article h3 {
   z-index: 1;
   background: white;
   color: black;
+}
+
+.a:hover .pointier_du_haut {
+  -webkit-animation: p3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: p3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  z-index: 1;
+  background: white;
+}
+
+@-webkit-keyframes p3 {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-opacity: 0;
+    opacity: 0;
+  }
+  90% {
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+    -webkit-background: white;
+    background: white;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-opacity: 1;
+    opacity: 1;
+    -webkit-background: white;
+    background: white;
+  }
+}
+
+@keyframes p3 {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-opacity: 0;
+    opacity: 0;
+  }
+  90% {
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+    -webkit-background: white;
+    background: white;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-opacity: 1;
+    opacity: 1;
+    -webkit-background: white;
+    background: white;
+  }
 }
 
 .a:hover .gras {
@@ -1135,7 +1195,10 @@ article h3 {
 }
 
 @media (min-width: 375px) and (max-width: 720px) {
-  .pointier {
+  .pointier, .pointier_du_haut {
+    display: inline-block;
+  }
+  .pointier_du_haut {
     display: inline-block;
   }
 }
@@ -1144,7 +1207,10 @@ article h3 {
   .main {
     width: auto;
   }
-  .main .pointier {
+  .main .pointier, .main .pointier_du_haut {
+    display: none;
+  }
+  .main .pointier_du_haut {
     display: none;
   }
   .main .header--title {

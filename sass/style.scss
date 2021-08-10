@@ -408,8 +408,19 @@ footer{
     top: 45px;
     right: 32px;
     text-align: center;
-
+    border: 0.5px solid white;
 }
+.pointier_du_haut{
+    @extend .pointier;
+    top: 10px;
+    height: 22px;
+    right: 0px;
+}
+
+
+
+
+
                                         // ********************************
                                         // ******BALISE PRIX SLIDE LEFT******
                                         // ********************************
@@ -506,9 +517,68 @@ article{
         .icon_check{
             @include animation_icon_check;
           }
-    
+
         .pointier{
             @include pointier_left;
+        }
+        .pointier_du_haut{
+                -webkit-animation: p3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: p3 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            z-index: 1;
+            background: white;
+            
+            @-webkit-keyframes p3 {
+                0% {
+                  -webkit-transform: translateX(0);
+                          transform: translateX(0);
+                 -webkit-opacity: 0;
+                        opacity: 0;
+                //  -webkit-background:$tertiaire ;
+                //  background: $tertiaire;
+                          
+                }
+                90%{
+                    -webkit-opacity: 0.8;
+                    opacity: 0.8;
+                    -webkit-background: white;
+                    background: white;
+                }
+                100% {
+                  -webkit-transform: translateX(-100px);
+                          transform: translateX(-100px);
+                 -webkit-opacity: 1;
+                 opacity: 1;
+                 -webkit-background: white;
+                 background: white;
+                          
+                }
+            }
+            @keyframes p3 {
+                0% {
+                  -webkit-transform: translateX(0);
+                          transform: translateX(0);
+                   -webkit-opacity: 0;
+                   opacity: 0;
+                //    -webkit-background: $tertiaire;
+                //    background: $tertiaire;
+                          
+                }
+                90%{
+                    -webkit-opacity: 0.8;
+                    opacity: 0.8;
+                    -webkit-background: white;
+                    background: white;
+                }
+                100% {
+                  -webkit-transform: translateX(-100px);
+                          transform: translateX(-100px);
+                  -webkit-opacity: 1;
+                  opacity: 1;
+                  -webkit-background: white;
+                  background: white;
+                          
+                }
+            }
         }
         .gras{
             @include prix_left;
@@ -540,6 +610,9 @@ article{
     .pointier{
         display: inline-block;
     }
+    .pointier_du_haut{
+        display: inline-block;
+    }
 }
 
 
@@ -548,6 +621,9 @@ article{
     .main{
         width: auto;
         .pointier{
+            display: none;
+        }
+        .pointier_du_haut{
             display: none;
         }
 
